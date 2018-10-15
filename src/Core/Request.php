@@ -1,6 +1,6 @@
 <?php
 
-namespace Bookstore\Core;
+namespace TwitterClone\Core;
 
 class Request
 {

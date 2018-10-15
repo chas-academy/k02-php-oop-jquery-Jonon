@@ -1,5 +1,5 @@
 <?php
-    namespace Bookstore\Exceptions;
+    namespace TwitterClone\Exceptions;
 
     use Exception;
 

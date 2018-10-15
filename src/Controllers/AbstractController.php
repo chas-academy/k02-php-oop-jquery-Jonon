@@ -1,8 +1,8 @@
 <?php
 
-namespace Bookstore\Controllers;
+namespace TwitterClone\Controllers;
 
-use Bookstore\Core\Request;
+use TwitterClone\Core\Request;
 
 abstract class AbstractController
 {

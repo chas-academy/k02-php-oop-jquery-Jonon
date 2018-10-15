@@ -1,9 +1,9 @@
 <?php
 
-namespace Bookstore\Core;
+namespace TwitterClone\Core;
 
-use Bookstore\Controllers\ErrorController;
-use Bookstore\Controllers\CustomerController;
+use TwitterClone\Controllers\ErrorController;
+use TwitterClone\Controllers\CustomerController;
 
 class Router
 {
@@ -51,7 +51,7 @@ class Router
         array $info,
         Request $request
     ): string {
-        $controllerName = '\Bookstore\Controllers\\' . $info['controller'] . 'Controller';
+        $controllerName = '\TwitterClone\Controllers\\' . $info['controller'] . 'Controller';
         $controller = new $controllerName($request);
 
         if (isset($info['login']) && $info['login']) {

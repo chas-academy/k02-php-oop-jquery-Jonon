@@ -1,8 +1,8 @@
 <?php
 
-namespace Bookstore\Models;
+namespace TwitterClone\Models;
 
-use Bookstore\Core\Connection;
+use TwitterClone\Core\Connection;
 
 abstract class AbstractModel {
     protected $db;

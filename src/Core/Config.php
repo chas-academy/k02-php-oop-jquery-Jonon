@@ -1,9 +1,9 @@
 <?php
 
-namespace Bookstore\Core;
+namespace TwitterClone\Core;
 
-use Bookstore\Utils\Singleton;
-use Bookstore\Exceptions\NotFoundException;
+use TwitterClone\Utils\Singleton;
+use TwitterClone\Exceptions\NotFoundException;
 
 /**
  * Singleton

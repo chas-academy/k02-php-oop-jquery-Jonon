@@ -1,6 +1,6 @@
 <?php
 
-namespace Bookstore\Controllers;
+namespace TwitterClone\Controllers;
 
 class ErrorController extends AbstractController
 {

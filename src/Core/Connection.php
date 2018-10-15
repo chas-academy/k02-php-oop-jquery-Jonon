@@ -1,10 +1,10 @@
 <?php
 
-namespace Bookstore\Core;
+namespace TwitterClone\Core;
 
 use \PDO;
-use Bookstore\Core\Config;
-use Bookstore\Utils\Singleton;
+use TwitterClone\Core\Config;
+use TwitterClone\Utils\Singleton;
 
 class Connection extends Singleton
 {

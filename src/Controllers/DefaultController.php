@@ -1,8 +1,8 @@
 <?php
 
-namespace Bookstore\Controllers;
+namespace TwitterClone\Controllers;
 
-use Bookstore\Exceptions\NotFoundException;
+use TwitterClone\Exceptions\NotFoundException;
 
 class DefaultController extends AbstractController
 {

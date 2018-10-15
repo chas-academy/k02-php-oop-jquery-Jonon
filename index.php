@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-use Bookstore\Core\Router;
-use Bookstore\Core\Request;
+use TwitterClone\Core\Router;
+use TwitterClone\Core\Request;
 
 function autoloader($classname)
 {
