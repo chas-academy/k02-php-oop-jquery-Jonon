@@ -1,11 +1,11 @@
 <?php
-    namespace TwitterClone\Exceptions;
+namespace TwitterClone\Exceptions;
 
-    use Exception;
+use Exception;
 
-    /**
-     * Custom Exception
-     */
-    class NotFoundException extends Exception
-    {
-    }
+/**
+ * Custom Exception
+ */
+class NotFoundException extends Exception
+{
+}
