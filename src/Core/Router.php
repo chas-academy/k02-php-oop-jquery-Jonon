@@ -3,7 +3,7 @@
 namespace TwitterClone\Core;
 
 use TwitterClone\Controllers\ErrorController;
-use TwitterClone\Controllers\CustomerController;
+use TwitterClone\Controllers\UserController;
 
 class Router
 {
