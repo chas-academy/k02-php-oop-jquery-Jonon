@@ -8,7 +8,7 @@
         <p>
             <a href="/customers" class="btn btn-secondary">Visa kunder</a>
         </p>
-        <form action="/books/search" method="get">
+        <form action="/books/search" method="post">
             <label>Title</label>
             <input type="text" name="title">
             <label>Author</label>
