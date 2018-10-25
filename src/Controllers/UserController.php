@@ -7,6 +7,26 @@ use TwitterClone\Models\UserModel;
 
 class UserController extends AbstractController
 {
+    public function register()
+    {
+        if ($this->request->isGet()) {
+            return $this->render('views/register.php', []);
+        } elseif ($this->request->isPost()) {
+            $params = $this->request->getParams();
+            $userModel = new UserModel();
+
+            $properties = [
+                'name' => $params->get('name'),
+                'username' => $params->get('username'),
+                'password' => $params->get('password'),
+                'email' => $params->get('email')
+            ];
+
+            $success = $userModel->register($properties);
+            return $this->render('views/register.php', ['success' => $success]);
+        }
+    }
+
     public function login(): string
     {
         //  checks if the request is a post request
@@ -16,7 +36,6 @@ class UserController extends AbstractController
 
         //  get the parameters from the form
         $params = $this->request->getParams();
-        var_dump($params);
 
         //  check if the parameters exist
         if (!$params->has('email') && !$params->has('password')) {
@@ -43,16 +62,14 @@ class UserController extends AbstractController
             $params = ['errorMessage' => 'Email not found.'];
             return $this->render('views/error.php', $params);
         }
-
-        // check if password matches
-        if ($password != $user->getPassword()) {
+        
+        if (!password_verify($password, $user->getPassword())) {
             $params = ['errorMessage' => 'Password not valid.'];
             return $this->render('views/error.php', $params);
         }
-
         
         $_SESSION['user'] = $user;
-        var_dump($_SESSION);
+        var_dump($_SESSION['user']);
 
         //header('Location: /profile');
         return "";
