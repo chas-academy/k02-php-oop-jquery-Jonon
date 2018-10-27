@@ -31,7 +31,7 @@ class UserController extends AbstractController
     {
         //  checks if the request is a post request
         if (!$this->request->isPost()) {
-            return $this->render('views/login.php');
+            return $this->render('views/login.php', []);
         }
 
         //  get the parameters from the form
@@ -69,9 +69,18 @@ class UserController extends AbstractController
         }
         
         $_SESSION['user'] = $user;
-        var_dump($_SESSION['user']);
 
-        //header('Location: /profile');
+        header('Location: /profile');
         return "";
+    }
+
+
+    public function logout()
+    {
+        session_unset();
+        unset($_SESSION["user"]);
+        session_destroy();
+        header('Location: /');
+        return '';
     }
 }
