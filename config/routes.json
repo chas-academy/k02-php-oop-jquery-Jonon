@@ -3,8 +3,20 @@
     "controller": "Default",
     "method": "start"
   },
+  "register": {
+    "controller": "User",
+    "method": "register"
+  },
   "login": {
     "controller": "User",
     "method": "login"
+  },
+  "logout": {
+    "controller": "User",
+    "method": "logout"
+  },
+  "profile": {
+    "controller": "Profile",
+    "method": "start"
   }
 }
