@@ -55,4 +55,24 @@ class UserModel extends AbstractModel
 
         return $row;
     }
+
+    public function getProfileByUsername($username)
+    {
+        $query = 'SELECT * FROM users WHERE username = :username';
+        $sth = $this->db->prepare($query);
+        
+        $params = [
+            'username' => $username
+        ];
+
+        $sth->execute($params);
+
+        $users = $sth->fetchObject(self::CLASSNAME);
+        
+        if (empty($users)) {
+            throw new NotFoundException();
+        }
+
+        return $users;
+    }
 }
