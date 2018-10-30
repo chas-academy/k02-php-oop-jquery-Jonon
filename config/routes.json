@@ -18,5 +18,12 @@
   "profile": {
     "controller": "Profile",
     "method": "start"
+  },
+  "profile/:username": {
+    "controller": "User",
+    "method": "getProfileByUsername",
+    "params": {
+      "username": "string"
+    }
   }
 }
