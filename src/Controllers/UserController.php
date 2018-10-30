@@ -74,7 +74,6 @@ class UserController extends AbstractController
         return "";
     }
 
-
     public function logout()
     {
         session_unset();
@@ -82,5 +81,22 @@ class UserController extends AbstractController
         session_destroy();
         header('Location: /');
         return '';
+    }
+
+    public function getProfileByUsername($username)
+    {
+        $userModel = new UserModel();
+        
+        
+        try {
+            $user = $userModel->getProfileByUsername($username);
+        } catch (\Exception $e) {
+            $properties = ['errorMessage' => 'User not found!'];
+            return $this->render('views/error.php', $properties);
+        }
+
+        $properties = ['user' => $user];
+      
+        return $this->render('views/profile.php', $properties);
     }
 }
