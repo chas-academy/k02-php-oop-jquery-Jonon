@@ -15,4 +15,12 @@ nav.gradient {
     rgba(254, 225, 64, 1.0) 5%,
     rgba(255, 149, 32, 1.0) 30%,
     rgba(250, 113, 155, 1.0)) 65%;
-} 
+}
+
+.default__background-image {
+    background-image: url(../images/default.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 300px;
+}
