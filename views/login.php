@@ -1,4 +1,7 @@
-<div class="container py-5">
+<?php
+//check if user is logged in, if not render login view
+if (!isset($_SESSION['user'])) {
+    echo '<div class="container py-5">
     <div class="row">
         <div class="col-md-12">
             <div class="row">
@@ -21,4 +24,8 @@
             </div>
         </div>
     </div>
-</div>
+</div>';
+//if user logged in redirect to home page
+} else {
+    return header("Location: /");
+}
