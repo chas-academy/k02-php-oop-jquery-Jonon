@@ -70,7 +70,7 @@ class UserController extends AbstractController
         
         $_SESSION['user'] = $user;
 
-        header('Location: /profile');
+        header('Location: /profile/'.$user->getUsername());
         return "";
     }
 
