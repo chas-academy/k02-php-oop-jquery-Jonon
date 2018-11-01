@@ -1,5 +1,5 @@
 .navbar-height {
-    height: 3rem;
+    height: 3.3rem;
 }
 
 nav.gradient {
@@ -51,6 +51,9 @@ nav.gradient {
     border-radius: 0  0 1% 1% ;
 }
 
+.dropdown-active {
+    display: none;
+}
 
 .dropdown__list {
     list-style: none;
