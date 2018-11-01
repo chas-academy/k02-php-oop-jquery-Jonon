@@ -46,11 +46,30 @@ nav.gradient {
 .dropdown__navigation {
     width: 100px;
     background-color: rgb(255, 255, 255);
-    text-indent: 1.3rem;
-    
+    text-indent: 1rem;
+    margin-left: -1rem;
+    border-radius: 0  0 1% 1% ;
 }
+
 
 .dropdown__list {
     list-style: none;
     padding: 0;
+}
+.dropdown__list a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.dropdown__list_element{
+    padding: 10px;
+}
+
+.dropdown__list_element--hover:hover {
+    background-color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+}
+
+.dropdown__list_link {
+   display: block;
 }
