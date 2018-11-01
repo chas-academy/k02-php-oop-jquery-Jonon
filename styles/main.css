@@ -39,16 +39,18 @@ nav.gradient {
     justify-content: center;
 }
 
-.dropdown {
+.dropdown__icon-button {
     cursor: pointer;
 }
 
-.options ul {
-    list-style: none;
-    padding: 0;
+.dropdown__navigation {
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    text-indent: 1.3rem;
+    
 }
 
-.options {
-    width: 100px;
-    
+.dropdown__list {
+    list-style: none;
+    padding: 0;
 }
