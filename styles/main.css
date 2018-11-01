@@ -1,3 +1,7 @@
+.navbar-height {
+    height: 3rem;
+}
+
 nav.gradient {
     background: rgba(255, 149, 32, 1.0) 30%;
     
@@ -33,4 +37,18 @@ nav.gradient {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.options {
+    width: 100px;
+    
 }
