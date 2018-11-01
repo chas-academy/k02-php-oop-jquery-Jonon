@@ -62,7 +62,7 @@ nav.gradient {
 }
 
 .dropdown__list_element{
-    padding: 10px;
+    
 }
 
 .dropdown__list_element--hover:hover {
@@ -72,4 +72,5 @@ nav.gradient {
 
 .dropdown__list_link {
    display: block;
+   padding: 10px;
 }
