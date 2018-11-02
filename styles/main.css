@@ -58,6 +58,7 @@
 /* Remove padding from jumbotron */
 .b-img {
     padding: 0px;
+   
 }
 
 .default__background-image {
@@ -67,6 +68,7 @@
     background-position: bottom;
     height: 450px;
     border-radius: 0;
+    margin: 0px;
 }
 
 .profile {
