@@ -75,12 +75,20 @@
     background-image: url('../images/profile_default.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
     margin-left: 1.3rem;
     
 }
+
+.profile--small {
+    height: 45px;
+    width: 45px;
+}
+
+.profile--large {
+    height: 200px;
+    width: 200px;
+}
+
 
 
 /* Utilities */
@@ -88,4 +96,8 @@
 /* text indent */
 .ti-1 {
     text-indent: 1rem;
+}
+
+.mt-5-invert {
+    margin-top: -11rem;
 }
