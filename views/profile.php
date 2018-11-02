@@ -7,8 +7,9 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4 mt-3">
-            <div class="card  ">
+        <div class="col-sm-4 mt-5-invert ">
+            <div class="profile profile--large img-thumbnail rounded-circle"></div>
+            <div class="card mt-3">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $user->getName();?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $user->getUsername();?></h6>
@@ -24,7 +25,7 @@
                 <div class="card">
                     <div class="card-body mt-2">
                         <div class="row">
-                            <div class="profile"></div>
+                            <div class="profile profile--small rounded-circle"></div>
                             <div class="ml-3">
                                 <h6 class="card-title"><?php echo $user->getName();?></h6>
                                 <p class="card-text">some tweet text.</p>
