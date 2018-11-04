@@ -1,7 +1,20 @@
+
+.far, .fas {
+    font-size: 1.4rem;
+}
+
 .fa-user-circle {
     font-size: 2rem;
 }
 
 .fa-user-circle:hover {
-    color: #FF5C00;
+    color: #FFA800;
+}
+
+.fa-home, .fa-envelope, .fa-search {
+    color: rgb(46, 46, 45);
+}
+
+.fa-home:hover, .fa-envelope:hover, .fa-search:hover {
+    color: #FFA800;
 }
