@@ -1,0 +1,28 @@
+.default__background-image {
+    background-image: url(../images/default.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 450px;
+    border-radius: 0;
+    margin: 0px;
+    
+}
+
+.profile {
+    background-image: url('../images/profile_default.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 1.3rem;
+    
+}
+
+.profile--small {
+    height: 45px;
+    width: 45px;
+}
+
+.profile--large {
+    height: 200px;
+    width: 200px;
+}

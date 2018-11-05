@@ -1,0 +1,25 @@
+/* Utilities */
+
+.aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border_bottom {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.box-shadow-b {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+}
+
+/* text indent */
+.ti-1 {
+    text-indent: 1rem;
+}
+
+.mt-5-invert {
+    margin-top: -11rem;
+}
+
