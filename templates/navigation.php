@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-light border_bottom p-x-sm-0 navbar-height">
+<nav class="navbar navbar-light bg-light border_bottom p-x-sm-0">
     <div class="d-sm-flex justify-content-between"> 
         <?php
         if (isset($_SESSION['user'])) {
