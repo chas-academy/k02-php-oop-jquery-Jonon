@@ -1,3 +1,4 @@
+/* Unset position for the menu to get full width of viewport */
 .dropdown {
     position: unset;
 }
@@ -8,7 +9,6 @@
 
 .dropdown__navigation {
     background-color: rgb(255, 255, 255);
-    /* text-indent: 1rem; */
     margin-left: -1rem;
     border-radius: 0  0 1% 1% ;
     margin-top: 12px;
@@ -31,10 +31,6 @@
     color: rgb(0, 0, 0);
 }
 
-.dropdown__list_element{
-    
-}
-
 .dropdown__list_element--hover:hover {
     background-color: rgb(230, 230, 230);
     color: rgb(0, 0, 0);
@@ -42,8 +38,10 @@
 
 .dropdown__list_link {
    display: block;
-   padding: 1rem;
+   padding: 1rem 2rem;
 }
+
+
 
 @media (max-width: 575.98px) {
     .dropdown__list {
@@ -55,10 +53,9 @@
     .dropdown__navigation {
         width: 100%;
         background-color: rgb(255, 255, 255);
-        /* text-indent: 1rem; */
         margin-left: -1rem;
         border-radius: 0  0 1% 1% ;
-        margin-top: 12px;
+        margin-top: 9px;
         text-align: center;
     }
 }
