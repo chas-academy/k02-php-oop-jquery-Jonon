@@ -2,7 +2,7 @@
 
 $(document).ready(() => {
     $('.dropdown__icon-button').on('click', () => {
-        $('.dropdown-active').toggle()
+        $('.dropdown-active').toggle();
     })
 
     $('.dropdown-active').on('mouseleave', () => {
