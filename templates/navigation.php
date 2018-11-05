@@ -1,9 +1,9 @@
-<nav class="navbar navbar-light bg-light border_bottom p-x-sm-0">
+<nav class="navbar navbar-light bg-light border_bottom p-x-sm-0 navbar-height">
     <div class="d-sm-flex justify-content-between"> 
         <?php
         if (isset($_SESSION['user'])) {
 $html = <<<HTML
-        <div>
+        <div class="d-flex w-100 justify-content-between">
             <div class="dropdown">
             <!-- profile icon-->
                 <i class="fas fa-user-circle dropdown__icon-button"></i>
@@ -15,9 +15,7 @@ $html = <<<HTML
                     </ul>
                 </nav>
             </div>
-        </div>
-        <!-- logout path -->
-        <div class="aligner">
+            <div class="d-flex aligner">
                 <a href="/" class=""><i class="fas fa-home"></i>
                 </a>
 
@@ -27,6 +25,9 @@ $html = <<<HTML
                 <a href="/" class="ml-3"><i class="fas fa-search"></i>
                 </a>
         </div>
+        </div>
+        <!-- logout path -->
+        
 HTML;
             echo $html;
         } else {
