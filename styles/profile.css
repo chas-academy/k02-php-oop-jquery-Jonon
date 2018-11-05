@@ -9,6 +9,12 @@
     
 }
 
+/* Remove padding from jumbotron */
+.b-img {
+    padding: 0px;
+   
+}
+
 .profile {
     background-image: url('../images/profile_default.jpg');
     background-repeat: no-repeat;

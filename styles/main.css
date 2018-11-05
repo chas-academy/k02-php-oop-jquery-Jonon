@@ -1,16 +1,6 @@
-@import url('icons.css');
-@import url('utilities.css');
+@import url('navigation.css');
 @import url('dropdown-menu.css');
 @import url('profile.css');
 
-
-.navbar-height {
-    height: 3.3rem;
-}
-
-
-/* Remove padding from jumbotron */
-.b-img {
-    padding: 0px;
-   
-}
+@import url('icons.css');
+@import url('utilities.css');
