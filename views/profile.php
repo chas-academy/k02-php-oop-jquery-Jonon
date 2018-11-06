@@ -18,7 +18,7 @@
             </li>
         </ul>
         <a href="#" class="btn btn-outline-primary">Edit Profile</a>
-    <div>     
+    </div>     
 </nav>
 
 <div class="container">
