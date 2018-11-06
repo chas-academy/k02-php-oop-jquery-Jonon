@@ -49,9 +49,9 @@
                 <div class="media-body">
                     <h5 class="mt-0"><?php echo $user->getName();?></h5>
                     <p>It’s the ship that made the Kessel Run in less than twelve parsecs! I’ve outrun Imperial starships, not the local bulk-cruisers, mind you. I’m talking about the big Corellian ships now. She’s fast enough for you, old man.</p>
-                    <nav>
+                    <nav class="">
                         <i class="far fa-comment"></i>
-                        <i class="far fa-heart"></i>
+                        <i class="far fa-heart ml-5"></i>
                     </nav>
                 </div>
             </div>
