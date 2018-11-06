@@ -18,3 +18,17 @@
 .fa-home:hover, .fa-envelope:hover, .fa-search:hover {
     color: #FFA800;
 }
+
+
+.fa-comment, .fa-heart {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.fa-comment:hover {
+    color: rgba(17, 109, 184, 0.849)
+}
+
+
+.fa-heart:hover {
+    color: rgba(255, 0, 0, 0.849)
+}
