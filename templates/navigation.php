@@ -41,7 +41,7 @@ HTML;
         } else {
 $html = <<<HTML
             <div class="text-center">
-                <a href="/" class="navbar-brand">TwitterClone</a>
+                <a href="/" class="navbar-brand lh-1">TwitterClone</a>
                 </div>
 
             <div class="dropdown">
