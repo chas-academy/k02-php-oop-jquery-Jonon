@@ -1,21 +1,21 @@
 .btn-red {
-    background-color: #F93772;
+    background-color: #138496;
     color: #ffffff;
 }
 
 .btn-red:hover {
-    background-color: #F93772;
+    background-color: #0c6270;
     color: #ffffff;
     text-shadow: 0px 0px 1px #ffffff;
 }
 
 .btn-outline-red {
-    border: 2px solid #F93772;
-    color:  #F93772;
+    border: 2px solid #138496;
+    color:  #138496;
 }
 
 .btn-outline-red:hover {
-    background-color: #FC1E62;
+    background-color: #138496;
     color: #ffffff;
     text-shadow: 0px 0px 1px #ffffff;
 }
