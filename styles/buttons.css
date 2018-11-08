@@ -4,8 +4,9 @@
 }
 
 .btn-red:hover {
-    background-color: #C80054;
+    background-color: #F93772;
     color: #ffffff;
+    font-weight: bold;
 }
 
 .btn-outline-red {
