@@ -1,0 +1,19 @@
+.btn-red {
+    background-color: #F93772;
+    color: #ffffff;
+}
+
+.btn-red:hover {
+    background-color: #C80054;
+    color: #ffffff;
+}
+
+.btn-outline-red {
+    border: 2px solid #F93772;
+    color:  #F93772;
+}
+
+.btn-outline-red:hover {
+    background-color: #FC1E62;
+    color: #ffffff;
+}
