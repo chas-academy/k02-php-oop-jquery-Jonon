@@ -1,21 +1,10 @@
 <nav class="navbar navbar-light bg-light border_bottom p-x-sm-0">
-    <div class="d-sm-flex justify-content-between"> 
+    <div class="d-sm-flex justify-content-between">     
+        <div class="d-flex w-100 justify-content-around">
         <?php
         if (isset($_SESSION['user'])) {
-$html = <<<HTML
-        <div class="d-flex w-100 justify-content-between">
-            <div class="dropdown">
-            <!-- profile icon-->
-                <i class="fas fa-user-circle dropdown__icon-button"></i>
-                <nav class="dropdown__navigation dropdown-active">
-                    <ul class="dropdown__list">
-                        <li class="dropdown__list_element dropdown__list_element--hover"><a class="dropdown__list_link" href="/profile/jonon">Profile</a></li>
-                        <li class="dropdown__list_element dropdown__list_element--hover"><a class="dropdown__list_link" href="#">Settings</a></li>
-                        <li class="dropdown__list_element dropdown__list_element--hover"><a class="dropdown__list_link" href="/logout">Log out</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="d-flex aligner">
+            $html = <<<HTML
+        <div class="d-flex aligner">
                 <a href="/" class=""><i class="fas fa-home"></i>
                 </a>
 
@@ -24,28 +13,64 @@ $html = <<<HTML
 
                 <a href="/" class="ml-3"><i class="fas fa-search"></i>
                 </a>
-        </div>
-        </div>
-        <!-- logout path -->
-        
+            </div>
+
+            <div class="dropdown">
+            <!-- profile icon-->
+                <i class="fas fa-user-circle dropdown__icon-button"></i>
+                <nav class="dropdown__navigation dropdown-active">
+                    
+                    <ul class="dropdown__list">
+
+                        <li class="dropdown__list-item">
+                            <a class="dropdown__list-item-link btn btn-red" href="/profile/jonon">Profile</a></li>
+
+                        <li class="dropdown__list-item mt-2">
+                            <a class="dropdown__list-item-link  btn btn-red" href="#">Settings</a></li>
+
+                        
+
+                        <li class="dropdown__list-item mt-4">
+                            
+                            <a class="dropdown__list-item-link btn btn-outline-red" href="/logout">Log out</a></li>
+                    </ul>
+                </nav>
+            </div>
 HTML;
             echo $html;
         } else {
-            // login and register path
 $html = <<<HTML
-                <div class="text-center">
+            <div class="text-center">
                 <a href="/" class="navbar-brand">TwitterClone</a>
                 </div>
-                
-                    <div class="d-sm-flex">
-                        <a href="/login" class="btn btn-primary d-block">Login</a>
-                        <a href="/register" class="btn btn-secondary d-block">Register</a>
+
+            <div class="dropdown">
+            <!-- profile icon-->
+                <i class="fas fa-user-circle dropdown__icon-button"></i>
+                <nav class="dropdown__navigation dropdown-active">     
+                    <ul class="dropdown__list">
+                        <li class="dropdown__list-item">
+                            <a class="dropdown__list-item-link btn btn-red" href="/login">Login</a></li>
                         
-                    </div>
+                        <li class="mt-4">Don't have an account?</li>
+                        <li class="dropdown__list-item mt-1">           
+                            <a class="dropdown__list-item-link btn btn-outline-red" href="/register">Register</a></li>
+                    </ul>
+                </nav>
+            </div>
+
 HTML;
             echo $html;
         }
         ?>
+
+                
+
+        </div>
+        <!-- logout path -->
+        
+
+ 
         </div>
     </div>
 </nav>
