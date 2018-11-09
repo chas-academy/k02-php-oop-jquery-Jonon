@@ -17,7 +17,7 @@
 
             <div class="dropdown">
             <!-- profile icon-->
-            <div>
+            <div class="d-flex align-items-center">
             <i class="fas fa-user-circle dropdown__icon-button"></i>
                 <i class="arrow-down"></i>
             </div>
