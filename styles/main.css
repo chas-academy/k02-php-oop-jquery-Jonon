@@ -5,3 +5,10 @@
 @import url('buttons.css');
 @import url('icons.css');
 @import url('utilities.css');
+
+
+.jumbo-home {
+    background-color: #2EB6C9;
+    border-radius: 0;
+    padding: 10rem 0;
+}
