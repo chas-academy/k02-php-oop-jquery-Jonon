@@ -18,6 +18,7 @@
             <div class="dropdown">
             <!-- profile icon-->
                 <i class="fas fa-user-circle dropdown__icon-button"></i>
+                <i class="arrow up"></i>
                 <nav class="dropdown__navigation dropdown-active">
                     
                     <ul class="dropdown__list">
@@ -47,6 +48,7 @@ $html = <<<HTML
             <div class="dropdown">
             <!-- profile icon-->
                 <i class="fas fa-user-circle dropdown__icon-button"></i>
+                <i class="arrow up"></i>
                 <nav class="dropdown__navigation dropdown-active">     
                     <ul class="dropdown__list">
                         <li class="dropdown__list-item">
