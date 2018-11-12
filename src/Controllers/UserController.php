@@ -4,6 +4,7 @@ namespace TwitterClone\Controllers;
 
 use TwitterClone\Exceptions\NotFoundException;
 use TwitterClone\Models\UserModel;
+use TwitterClone\Models\TweetModel;
 
 class UserController extends AbstractController
 {
@@ -86,6 +87,7 @@ class UserController extends AbstractController
     public function getProfileByUsername($username)
     {
         $userModel = new UserModel();
+        $tweetModel = new TweetModel();
         
         
         try {
@@ -95,7 +97,17 @@ class UserController extends AbstractController
             return $this->render('views/error.php', $properties);
         }
 
-        $properties = ['user' => $user];
+        try {
+            $tweets = $tweetModel->getTweets($username);
+        } catch (\Exception $e) {
+            $properties = ['errorMessage' => 'tweet not found!'];
+            return $this->render('views/error.php', $properties);
+        }
+
+        $properties = [
+            'user' => $user,
+            'tweets' => $tweets
+        ];
       
         return $this->render('views/profile.php', $properties);
     }
