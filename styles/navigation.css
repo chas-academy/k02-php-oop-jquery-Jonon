@@ -1,0 +1,10 @@
+
+.navigation-link:hover .f-home,
+.navigation-link:hover .f-bell,
+.navigation-link:hover .f-mail,
+.navigation-link:hover .f-search,
+.navigation-link:hover 
+{
+    color: #138496;
+    text-decoration: none;
+}
