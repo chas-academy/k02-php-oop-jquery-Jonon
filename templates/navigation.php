@@ -5,14 +5,21 @@
         if (isset($_SESSION['user'])) {
             $html = <<<HTML
         <div class="d-flex aligner">
-                <a href="/" class=""><i class="fas fa-home"></i>
+                <a href="/" class=""><i data-feather="home"></i>
+                <span class="ml-1 font-josefin-slab">Home</span>
                 </a>
 
-                <a href="/" class="ml-3"><i class="far fa-envelope"></i>
+                <a href="/" class="ml-3"><i data-feather="bell"></i>
+                <span class="ml-1 font-josefin-slab">Notifications</span>
                 </a>
 
-                <a href="/" class="ml-3"><i class="fas fa-search"></i>
+                <a href="/" class="ml-3"><i data-feather="mail"></i>
+                <span class="ml-1 font-josefin-slab">Messages</span>
                 </a>
+
+                <a href="/" class="ml-3"><i data-feather="search"></i>
+                <span class="ml-1 font-josefin-slab">Search</span>
+                </a>   
             </div>
 
             <div class="dropdown">
