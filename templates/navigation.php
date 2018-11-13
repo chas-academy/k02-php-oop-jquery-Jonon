@@ -4,28 +4,29 @@
         <?php
         if (isset($_SESSION['user'])) {
             $html = <<<HTML
-        <div class="d-flex aligner">
-                <a href="/" class=""><i data-feather="home"></i>
-                <span class="ml-1 font-josefin-slab">Home</span>
+        <div class="d-flex aligner ">
+                <a href="/" class="d-flex align-self-center text-grey  navigation-link">
+                <i data-feather="home" class="feather f-home"></i>
+                <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Home</span>
                 </a>
 
-                <a href="/" class="ml-3"><i data-feather="bell"></i>
-                <span class="ml-1 font-josefin-slab">Notifications</span>
+                <a href="/" class="d-flex align-self-center ml-4 text-grey navigation-link"><i data-feather="bell" class="feather f-bell"></i>
+                <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Notifications</span>
                 </a>
 
-                <a href="/" class="ml-3"><i data-feather="mail"></i>
-                <span class="ml-1 font-josefin-slab">Messages</span>
+                <a href="/" class="d-flex align-self-center ml-4 text-grey navigation-link"><i data-feather="mail" class="feather f-mail"></i>
+                <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Messages</span>
                 </a>
 
-                <a href="/" class="ml-3"><i data-feather="search"></i>
-                <span class="ml-1 font-josefin-slab">Search</span>
+                <a href="/" class="d-flex align-self-center ml-4 text-grey navigation-link"><i data-feather="search" class="feather f-search"></i>
+                <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Search</span>
                 </a>   
             </div>
 
             <div class="dropdown">
             <!-- profile icon-->
             <div class="d-flex align-items-center">
-            <i class="fas fa-user-circle dropdown__icon-button"></i>
+            <i data-feather="user" class=" dropdown__icon-button"></i>
                 <i class="arrow-down"></i>
             </div>
                 <nav class="dropdown__navigation dropdown-active">
@@ -57,7 +58,7 @@ $html = <<<HTML
             <div class="dropdown">
             <!-- profile icon-->
             <div class="d-flex align-items-center">
-            <i class="fas fa-user-circle dropdown__icon-button"></i>
+            <i data-feather="user" class=" dropdown__icon-button"></i>
                 <i class="arrow-down"></i>
             </div>
                 
