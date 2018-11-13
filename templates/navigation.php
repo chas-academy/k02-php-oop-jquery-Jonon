@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-light border_bottom p-x-sm-0 box-shadow-b">
+<nav class="navbar navbar-light bg-light border_bottom p-x-sm-0 box-shadow-b fixed-top">
     <div class="d-sm-flex justify-content-between">     
         <div class="d-flex w-100 justify-content-around">
         <?php
