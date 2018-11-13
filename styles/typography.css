@@ -1,3 +1,21 @@
 .font-oswald {
     font-family: 'Oswald', sans-serif;
 }
+
+.font-abril-fatface {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 10;
+}
+
+.font-josefin-slab {
+    font-family: 'Josefin Slab', serif;
+    font-weight: thin;
+}
+
+.text-pink {
+    color: #f04e4e;
+}
+
+.text-grey {
+    color: rgb(46, 46, 45);
+}
