@@ -26,7 +26,7 @@
             <div class="dropdown">
             <!-- profile icon-->
             <div class="d-flex align-items-center">
-            <i data-feather="user" class=" dropdown__icon-button"></i>
+            <i data-feather="user" class=" dropdown__icon-button rounded-circle"></i>
                 <i class="arrow-down"></i>
             </div>
                 <nav class="dropdown__navigation dropdown-active">
