@@ -1,3 +1,7 @@
+.navbar {
+    height: 3rem;
+}
+
 .bg-light {
     background-color: rgb(255, 255, 255);
 }
