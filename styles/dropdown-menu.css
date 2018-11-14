@@ -1,8 +1,3 @@
-/* Unset position for the menu to get full width of viewport */
-.dropdown {
-    position: unset;
-}
-
 .dropdown__icon-button {
     cursor: pointer;
     border: 2px solid rgba(0, 0, 0, 0.5);
@@ -35,10 +30,6 @@
     border-radius: 2%;
 }
 
-.dropdown__list-item {
-  
-}
-
 .dropdown__list-item-link {
     width: 100%;
     padding: 0.5rem 3rem;
@@ -50,26 +41,4 @@
 
 .dropdown__list_element--hover:hover {
     background-color: rgb(230, 230, 230);
-}
-
-.dropdown__list_link {
-}
-
-
-
-@media (max-width: 575.98px) {
-    /* .dropdown__list {
-        list-style: none;
-        padding: 0;
-        width: 100%;
-    }
-
-    .dropdown__navigation {
-        width: 100%;
-        background-color: rgb(255, 255, 255);
-        margin-left: -1rem;
-        border-radius: 0  0 1% 1% ;
-        margin-top: 9px;
-        text-align: center;
-    } */
 }
