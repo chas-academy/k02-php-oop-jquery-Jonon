@@ -33,4 +33,9 @@ class TweetModel extends AbstractModel
         
         return $tweets;
     }
+
+    public function createTweet()
+    {
+        $query '';
+    }
 }
