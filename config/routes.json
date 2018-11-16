@@ -3,6 +3,10 @@
     "controller": "Default",
     "method": "start"
   },
+  "home": {
+    "controller": "User",
+    "method": "home"
+  },
   "register": {
     "controller": "User",
     "method": "register"
