@@ -111,4 +111,18 @@ class UserController extends AbstractController
       
         return $this->render('views/profile.php', $properties);
     }
+
+    public function home()
+    {
+        if ($this->request->isGet()) {
+            return $this->render('views/home.php', []);
+        } elseif ($this->request->isPost()) {
+            $params = $this->request->getParams();
+            $tweetModel = new TweetModel();
+        }
+
+        var_dump($params);
+        return $this->render('views/home.php', []);
+
+    }
 }
