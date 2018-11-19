@@ -118,11 +118,17 @@ class UserController extends AbstractController
             return $this->render('views/home.php', []);
         } elseif ($this->request->isPost()) {
             $params = $this->request->getParams();
+            //  get id from logged in user
+            $userId = $_SESSION['user']->getId();
             $tweetModel = new TweetModel();
+
+            $properties = [
+                'tweet' => $params->get('tweet'),
+                'id' => $userId
+            ];
+            //  send to model
+            $createTweet = $tweetModel->CreateTweet($properties);
+            return $this->render('views/home.php', []);
         }
-
-        var_dump($params);
-        return $this->render('views/home.php', []);
-
     }
 }
