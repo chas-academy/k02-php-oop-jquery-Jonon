@@ -34,8 +34,16 @@ class TweetModel extends AbstractModel
         return $tweets;
     }
 
-    public function createTweet()
+    public function createTweet($properties)
     {
-        $query '';
+        $query = 'INSERT INTO tweets (tweet, id)
+        VALUES(:tweet, :id)';
+
+        $sth = $this->db->prepare($query);
+
+        $sth->bindValue(':tweet', $properties['tweet']);
+        $sth->bindValue(':id', $properties['id']);
+
+        $sth->execute();
     }
 }
