@@ -4,10 +4,10 @@
         <?php
         if (isset($_SESSION['user'])) {
             $html = <<<HTML
-        <div class="d-flex aligner ">
-                <a href="/" class="d-flex align-self-center text-grey  navigation-link">
+        <div class="d-flex aligner">
+                <a href="/home" class="d-flex align-self-center text-grey  navigation-link">
                 <i data-feather="home" class="feather f-home"></i>
-                <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Home</span>
+                <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none ">Home</span>
                 </a>
 
                 <a href="/" class="d-flex align-self-center ml-4 text-grey navigation-link"><i data-feather="bell" class="feather f-bell"></i>
