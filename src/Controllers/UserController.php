@@ -24,7 +24,7 @@ class UserController extends AbstractController
             ];
 
             $success = $userModel->register($properties);
-            return $this->render('views/register.php', ['success' => $success]);
+            return $this->render('views/login.php', ['success' => $success]);
         }
     }
 
