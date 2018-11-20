@@ -28,10 +28,6 @@ class TweetModel extends AbstractModel
 
         $tweets = $sth->fetchAll(PDO::FETCH_CLASS, self::CLASSNAME);
         
-        if (empty($tweets)) {
-            throw new NotFoundException();
-        }
-        
         return $tweets;
     }
 

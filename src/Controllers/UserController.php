@@ -100,8 +100,8 @@ class UserController extends AbstractController
         try {
             $tweets = $tweetModel->getTweets($username);
         } catch (\Exception $e) {
-            $properties = ['errorMessage' => 'tweet not found!'];
-            return $this->render('views/error.php', $properties);
+            $properties = ['errorMessage' => 'Please tweet something!'];
+            return $this->render('views/profile.php', $properties);
         }
 
         $properties = [
