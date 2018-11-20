@@ -15,7 +15,8 @@ class TweetModel extends AbstractModel
         $query = 'SELECT * FROM users
         INNER JOIN tweets
         ON users.id = tweets.id
-        WHERE users.username = :username;';
+        WHERE users.username = :username 
+        ORDER BY tweetId DESC;';
 
         $sth = $this->db->prepare($query);
 
