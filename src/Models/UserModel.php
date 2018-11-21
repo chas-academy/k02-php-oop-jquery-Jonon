@@ -12,8 +12,8 @@ class UserModel extends AbstractModel
 
     public function register(array $formData): string
     {
-        $query = 'INSERT INTO users (name, username, password, email)
-        VALUES (:name, :username, :password, :email)';
+        $query = 'INSERT INTO users (name, username, password, email, joinDate)
+        VALUES (:name, :username, :password, :email, CURDATE())';
 
         $sth = $this->db->prepare($query);
 
