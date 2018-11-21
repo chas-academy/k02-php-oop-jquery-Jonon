@@ -19,8 +19,8 @@ class UserController extends AbstractController
             $properties = [
                 'name' => $params->get('name'),
                 'username' => $params->get('username'),
-                'password' => $params->get('password'),
-                'email' => $params->get('email')
+                'email' => $params->get('email'),
+                'password' => $params->get('password')
             ];
 
             $success = $userModel->register($properties);

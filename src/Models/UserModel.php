@@ -19,8 +19,8 @@ class UserModel extends AbstractModel
 
         $sth->bindValue(':name', $formData['name']);
         $sth->bindValue(':username', $formData['username']);
-        $sth->bindValue(':password', password_hash($formData['password'], PASSWORD_DEFAULT));
         $sth->bindValue(':email', $formData['email']);
+        $sth->bindValue(':password', password_hash($formData['password'], PASSWORD_DEFAULT));
 
         $row = $sth->execute();
 
