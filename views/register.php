@@ -17,12 +17,12 @@ if (!isset($_SESSION['user'])) {
                                 <input type="text" class="form-control" name="username" placeholder="Username" required>
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="Password" required>
-                            </div>
-                            <div class="form-group">
                                 <label>Email</label>
                                 <input type="email" class="form-control" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" name="password" placeholder="Password" required>
                             </div>
                             <div class="form-group d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary ">Register</button>
