@@ -9,15 +9,7 @@ class User
     private $username;
     private $password;
     private $email;
-
-    // public function __construct($id, $name, $userName, $password, $email)
-    // {
-    //     $this->id = $id;
-    //     $this->name = $name;
-    //     $this->email = $email;
-    //     $this->userName = $userName;
-    //     $this->password = $password;
-    // }
+    private $joinDate;
 
     public function getId(): int
     {
@@ -42,5 +34,10 @@ class User
     public function getEmail(): string
     {
         return $this->email;
+    }
+
+    public function getDateJoined(): string
+    {
+        return $this->joinDate;
     }
 }
