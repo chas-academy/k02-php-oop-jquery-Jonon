@@ -1,4 +1,3 @@
-
 <div class="container-fluid b-img">
     <div id="jumbo" class="jumbotron default__background-image">
     </div>
@@ -32,9 +31,8 @@
                         <img class="align-self-start mr-3 rounded-circle profile--large" src="https://images.unsplash.com/photo-1542384701-c0e46e0eda04?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1339324b1b254b13747a87333861327f&auto=format&fit=crop&w=636&q=80" alt="Profile avatar">
                         <h5 class="card-title"><?php echo $user->getName();?></h5>
                         <h6 class="card-subtitle mb-2 text-muted"><?php echo $user->getUsername();?></h6>
-                        <p class="card-text">some text about myself.</p>
-                        <p class="card-text">Joined December 1837</p>
-                        <p class="card-text">Born: June 6, 1803.</p>
+                        <p class="card-text"><?php echo $user->getDescription()?></p>
+                        <p class="card-text">Joined <?php echo $user->getDateJoined()?></p>
                     </div>
                 </div>
         </div>

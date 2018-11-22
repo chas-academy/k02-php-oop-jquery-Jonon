@@ -10,6 +10,7 @@ class User
     private $password;
     private $email;
     private $joinDate;
+    private $description;
 
     public function getId(): int
     {
@@ -39,5 +40,10 @@ class User
     public function getDateJoined(): string
     {
         return $this->joinDate;
+    }
+
+    public function getDescription(): string
+    {
+        return $this->description;
     }
 }
