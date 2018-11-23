@@ -16,9 +16,9 @@
                     <a href="#">Followers</a>
                 </li>
             </ul>
-            <div class=" ml-5 d-sm-none d-md-block  d-sm-block d-none">
-            <a href="#" class="btn btn-outline-primary ">Edit Profile</a>
-            </div>
+                <div class=" ml-5 d-sm-none d-md-block  d-sm-block d-none">
+                <a href="#" class="btn btn-outline-primary ">Follow</a>
+                </div>'
         </div> 
     </div>
 </nav>

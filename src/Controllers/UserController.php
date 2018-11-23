@@ -108,6 +108,16 @@ class UserController extends AbstractController
             'user' => $user,
             'tweets' => $tweets
         ];
+
+
+        if (!isset($_SESSION['user'])) {
+            return $this->render('views/profile/profile_website_user.php', $properties);
+        } elseif ($_SESSION['user']->getId() == $user->getId()) {
+            return $this->render('views/profile/profile_profile-user.php', $properties);
+        } elseif ($_SESSION['user']) {
+            return $this->render('views/profile/profile_logged_in_user.php', $properties);
+        }
+
       
         return $this->render('views/profile.php', $properties);
     }
