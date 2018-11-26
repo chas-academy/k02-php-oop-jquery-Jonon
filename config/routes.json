@@ -19,15 +19,15 @@
     "controller": "User",
     "method": "logout"
   },
-  "profile": {
-    "controller": "Profile",
-    "method": "start"
-  },
   "profile/:username": {
     "controller": "User",
     "method": "getProfileByUsername",
     "params": {
       "username": "string"
     }
+  },
+  "tweet/delete": {
+    "controller": "Tweet",
+    "method": "delete"
   }
 }
