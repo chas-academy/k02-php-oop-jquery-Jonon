@@ -43,4 +43,9 @@ class TweetModel extends AbstractModel
 
         $sth->execute();
     }
+
+    public function deleteTweet()
+    {
+        
+    }
 }
