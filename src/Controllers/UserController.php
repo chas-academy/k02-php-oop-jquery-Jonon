@@ -89,7 +89,6 @@ class UserController extends AbstractController
         $userModel = new UserModel();
         $tweetModel = new TweetModel();
         
-        
         try {
             $user = $userModel->getProfileByUsername($username);
         } catch (\Exception $e) {
@@ -109,17 +108,27 @@ class UserController extends AbstractController
             'tweets' => $tweets
         ];
 
-
-        if (!isset($_SESSION['user'])) {
+        // Check if user is not logged in
+        if (!$this->isAuthenticated()) {
             return $this->render('views/profile/profile_website_user.php', $properties);
-        } elseif ($_SESSION['user']->getId() == $user->getId()) {
-            return $this->render('views/profile/profile_profile-user.php', $properties);
-        } elseif ($_SESSION['user']) {
+        }
+        
+        // Check if logged in user is the same as the profile user
+        if (!authenticatedUserIsSameAsProfileUser($user->getId())) {
             return $this->render('views/profile/profile_logged_in_user.php', $properties);
         }
-
-      
-        return $this->render('views/profile.php', $properties);
+        
+        if (isset($_POST['delete_tweet'])) {
+            try {
+                $tweets = $tweetModel->deleteTweet($username);
+                return $this->render('views/layout.php', []);
+            } catch (\Exception $e) {
+                $properties = ['errorMessage' => 'Could not delete tweet'];
+                return $this->render('views/profile.php', $properties);
+            }
+        }
+            
+        return $this->render('views/profile/profile_profile-user.php', $properties);
     }
 
     public function home()
@@ -140,5 +149,10 @@ class UserController extends AbstractController
             $createTweet = $tweetModel->CreateTweet($properties);
             return $this->render('views/home.php', []);
         }
+    }
+
+    private function authenticatedUserIsSameAsProfileUser(int $id): bool
+    {
+        return $_SESSION['user']->getId() == $id;
     }
 }
