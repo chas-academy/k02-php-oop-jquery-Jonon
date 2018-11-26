@@ -8,14 +8,16 @@ abstract class AbstractController
 {
     protected $request;
     protected $view;
-    protected $customerId;
 
     public function __construct(Request $request)
     {
         $this->request = $request;
     }
 
-    
+    protected function isAuthenticated(): bool
+    {
+        return isset($_SESSION['user']);
+    }
 
     protected function render(string $template, array $params): string
     {
