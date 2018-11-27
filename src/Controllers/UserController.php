@@ -114,18 +114,8 @@ class UserController extends AbstractController
         }
         
         // Check if logged in user is the same as the profile user
-        if (!authenticatedUserIsSameAsProfileUser($user->getId())) {
+        if (!$this->authenticatedUserIsSameAsProfileUser($user->getId())) {
             return $this->render('views/profile/profile_logged_in_user.php', $properties);
-        }
-        
-        if (isset($_POST['delete_tweet'])) {
-            try {
-                $tweets = $tweetModel->deleteTweet($username);
-                return $this->render('views/layout.php', []);
-            } catch (\Exception $e) {
-                $properties = ['errorMessage' => 'Could not delete tweet'];
-                return $this->render('views/profile.php', $properties);
-            }
         }
             
         return $this->render('views/profile/profile_profile-user.php', $properties);
