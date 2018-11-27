@@ -16,9 +16,10 @@
                     <a href="#">Followers</a>
                 </li>
             </ul>
-                <div class=" ml-5 d-sm-none d-md-block  d-sm-block d-none">
-                <a href="#" class="btn btn-outline-primary ">Edit Profile</a>
-                </div>'
+                <form class=" ml-5 d-sm-none d-md-block  d-sm-block d-none" method="post" action="">
+
+                    <button class="btn btn-outline-primary">Edit Profile</button>
+                </form>'
         </div> 
     </div>
 </nav>
@@ -53,7 +54,7 @@
                         </form>
                         
                     </div>
-                    <p><?php  echo $tweet->getTweet();?></p>
+                    <p class="text-word-break-all"><?php  echo $tweet->getTweet();?></p> 
                     <nav class="">
                         <i class="feather f-message-circle" data-feather="message-circle"></i>
                         <i class="feather f-heart ml-5" data-feather="heart"></i>
