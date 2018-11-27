@@ -44,8 +44,15 @@ class TweetModel extends AbstractModel
         $sth->execute();
     }
 
-    public function deleteTweet()
+    public function deleteTweet($properties)
     {
+        $query = 'DELETE FROM tweets
+        WHERE id = :userId AND tweetId = :tweetId';
+
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(':userId', $properties['userId']);
+        $sth->bindValue(':tweetId', $properties['tweetId']);
         
+        $sth->execute();
     }
 }
