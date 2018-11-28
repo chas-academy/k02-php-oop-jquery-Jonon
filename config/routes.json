@@ -19,6 +19,10 @@
     "controller": "User",
     "method": "logout"
   },
+  "profile/edit": {
+    "controller": "User",
+    "method": "updateDescription"
+  },
   "profile/:username": {
     "controller": "User",
     "method": "getProfileByUsername",
