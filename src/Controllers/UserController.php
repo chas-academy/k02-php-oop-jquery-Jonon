@@ -121,6 +121,27 @@ class UserController extends AbstractController
         return $this->render('views/profile/profile_profile-user.php', $properties);
     }
 
+    public function updateDescription()
+    {
+        $params = $this->request->getParams();
+
+        var_dump($params);
+
+        $userModel = new UserModel();
+
+        $properties =
+        [
+            'id' => $params->get('id'),
+            'name' => $params->get('name'),
+            'description' => $params->get('description')
+        ];
+
+        $UpdateDescription = $userModel->updateDescription($properties);
+
+        header("location: /profile/". $this->getAuthenticatedUser());
+    }
+    
+
     public function home()
     {
         if ($this->request->isGet()) {

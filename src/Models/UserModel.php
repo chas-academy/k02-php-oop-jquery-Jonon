@@ -75,4 +75,19 @@ class UserModel extends AbstractModel
 
         return $users;
     }
+
+    public function updateDescription($properties)
+    {
+        $query = 'UPDATE users
+        SET name = :name, description = :description
+        WHERE id = :id';
+
+        $sth = $this->db->prepare($query);
+
+        $sth->bindValue(':name', $properties['name']);
+        $sth->bindValue(':description', $properties['description']);
+        $sth->bindValue(':id', $properties['id']);
+
+        $sth->execute();
+    }
 }
