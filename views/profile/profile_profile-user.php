@@ -16,13 +16,12 @@
                     <a href="#">Followers</a>
                 </li>
             </ul>
-                <form class=" ml-5 d-sm-none d-md-block  d-sm-block d-none" method="post" action="">
-
-                    <button class="btn btn-outline-primary">Edit Profile</button>
-                </form>'
+            <button type="button" class="btn btn-outline-primary ml-5 d-sm-none d-md-block  d-sm-block d-none" data-toggle="modal" data-target="#ModalCenter">Edit Profile
+            </button>
         </div> 
     </div>
 </nav>
+
 
 <div class="container">
     <div class="row">
@@ -65,3 +64,38 @@
         </div>
     </div>
 </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Edit Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form class="d-sm-none d-md-block  d-sm-block d-none" method="post" action="/profile/edit">
+        <div class="modal-body">
+            <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
+            <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name"  value="<?php echo $user->getName()?>" required>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <textarea type="text" class="form-control" name="description" placeholder="Description" required><?php echo $user->getDescription()?></textarea>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
