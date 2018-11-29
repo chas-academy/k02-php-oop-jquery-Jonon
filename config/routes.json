@@ -7,6 +7,10 @@
     "controller": "User",
     "method": "home"
   },
+  "search": {
+    "controller": "Search",
+    "method": "get"
+  },
   "register": {
     "controller": "User",
     "method": "register"
