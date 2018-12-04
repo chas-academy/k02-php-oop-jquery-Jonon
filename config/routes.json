@@ -9,7 +9,7 @@
   },
   "search": {
     "controller": "Search",
-    "method": "get"
+    "method": "search"
   },
   "register": {
     "controller": "User",
