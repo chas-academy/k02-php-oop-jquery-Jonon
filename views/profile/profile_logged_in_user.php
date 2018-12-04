@@ -17,8 +17,10 @@
                 </li>
             </ul>
                 <div class=" ml-5 d-sm-none d-md-block  d-sm-block d-none">
-                <a href="#" class="btn btn-outline-primary ">Follow</a>
-                </div>'
+                <form action="/profile/follow" method="post">
+                    
+                    <button class="btn btn-outline-primary" type="submit">Follow</button>
+                </form>
         </div> 
     </div>
 </nav>
