@@ -24,6 +24,11 @@ abstract class AbstractController
         return $_SESSION['user']->getUsername();
     }
 
+    protected function getAuthenticatedUserId(): int
+    {
+        return $_SESSION['user']->getId();
+    }
+
     protected function render(string $template, array $params): string
     {
         extract($params);
