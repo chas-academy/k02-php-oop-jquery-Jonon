@@ -90,4 +90,16 @@ class UserModel extends AbstractModel
 
         $sth->execute();
     }
+
+    public function search($search)
+    {
+        $query = 'SELECT * FROM users
+        WHERE name LIKE :search OR username LIKE :search';
+
+        $sth = $this->db->prepare($query);
+        $sth->bindValue('search', "%$search%");
+        $sth->execute();
+
+        return $sth->fetchAll(PDO::FETCH_CLASS, self::CLASSNAME);
+    }
 }
