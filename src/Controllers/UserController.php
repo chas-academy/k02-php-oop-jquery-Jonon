@@ -10,8 +10,10 @@ class UserController extends AbstractController
 {
     public function register()
     {
+        // Check if request is a get request
         if ($this->request->isGet()) {
             return $this->render('views/register.php', []);
+            // Check if request is a post request
         } elseif ($this->request->isPost()) {
             $params = $this->request->getParams();
             $userModel = new UserModel();
@@ -125,8 +127,6 @@ class UserController extends AbstractController
     {
         $params = $this->request->getParams();
 
-        var_dump($params);
-
         $userModel = new UserModel();
 
         $properties =
@@ -143,7 +143,13 @@ class UserController extends AbstractController
 
     public function follow()
     {
-        
+        $params = $this->request->getParams();
+
+        var_dump($params);
+
+
+
+        return "";
     }
     
 
