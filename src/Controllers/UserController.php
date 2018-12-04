@@ -140,6 +140,11 @@ class UserController extends AbstractController
 
         header("location: /profile/". $this->getAuthenticatedUser());
     }
+
+    public function follow()
+    {
+        
+    }
     
 
     public function home()
