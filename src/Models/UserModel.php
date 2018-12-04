@@ -91,6 +91,19 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
+    public function follow($properties)
+    {
+        $query = 'INSERT INTO followers(userId, followerId)
+        VALUES(:id, :followerId)';
+
+        $sth = $this->db->prepare($query);
+
+        $sth->bindValue(':id', $properties['id']);
+        $sth->bindValue(':followerId', $properties['followerId']);
+
+        $sth->execute();
+    }
+
     public function search($search)
     {
         $query = 'SELECT * FROM users
