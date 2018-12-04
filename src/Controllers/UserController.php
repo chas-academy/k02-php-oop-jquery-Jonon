@@ -144,12 +144,19 @@ class UserController extends AbstractController
     public function follow()
     {
         $params = $this->request->getParams();
+        $getUsername = $this->request->getParams()->getString('username');
 
-        var_dump($params);
+        $userModel = new UserModel();
 
+        $properties = 
+        [
+            'id' =>  $params->get('id'),
+            'followerId' => $this->getAuthenticatedUserId()
+        ];
 
+        $followUser = $userModel->follow($properties);
 
-        return "";
+        header("location: /profile/". $getUsername);
     }
     
 
