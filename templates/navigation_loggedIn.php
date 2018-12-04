@@ -17,7 +17,7 @@
                     <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Messages</span>
                 </a>
 
-                <a href="/" class="d-flex align-self-center ml-4 text-grey navigation-link">
+                <a href="/search" class="d-flex align-self-center ml-4 text-grey navigation-link">
                     <i data-feather="search" class="feather f-search"></i>
                     <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Search</span>
                 </a>   
@@ -32,7 +32,7 @@
                 <nav class="dropdown__navigation dropdown-active">
                     <ul class="dropdown__list">
                         <li class="dropdown__list-item">
-                            <a class="dropdown__list-item-link btn btn-red" href="/profile/<?php echo $_SESSION['user']->getUsername() . '"'?> >Profile
+                            <a class="dropdown__list-item-link btn btn-red" href="/profile/<?php echo $_SESSION['user']->getUsername()?>" >Profile
                         </a></li>
                         <li class="dropdown__list-item mt-2">
                             <a class="dropdown__list-item-link  btn btn-red" href="#">Settings</a></li>
