@@ -27,6 +27,10 @@
     "controller": "User",
     "method": "updateDescription"
   },
+  "profile/follow": {
+    "controller": "User",
+    "method": "follow"
+  },
   "profile/:username": {
     "controller": "User",
     "method": "getProfileByUsername",
