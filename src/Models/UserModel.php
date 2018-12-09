@@ -56,7 +56,7 @@ class UserModel extends AbstractModel
         return $row;
     }
 
-    public function getProfileByUsername($username)
+    public function getByUsername($username)
     {
         $query = 'SELECT * FROM users WHERE username = :username';
         $sth = $this->db->prepare($query);

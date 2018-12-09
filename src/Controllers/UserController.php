@@ -92,7 +92,7 @@ class UserController extends AbstractController
         $tweetModel = new TweetModel();
         
         try {
-            $user = $userModel->getProfileByUsername($username);
+            $user = $userModel->getByUsername($username);
         } catch (\Exception $e) {
             $properties = ['errorMessage' => 'User not found!'];
             return $this->render('views/error.php', $properties);
