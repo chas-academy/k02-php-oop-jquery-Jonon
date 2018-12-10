@@ -182,6 +182,11 @@ class UserController extends AbstractController
         return $this->render('views/profile/profile_following.php', $properties);
     }
 
+    public function getFollowers()
+    {
+        
+    }
+
     public function home()
     {
         if ($this->request->isGet()) {
