@@ -9,11 +9,11 @@ class Follower
 
     public function getUserId()
     {
-        return $this->userId();
+        return $this->userId;
     }
 
     public function getFollowerId()
     {
-        return $this->followerId();
+        return $this->followerId;
     }
 }
