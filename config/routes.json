@@ -38,6 +38,13 @@
       "username": "string"
     }
   },
+  "profile/:username/following": {
+    "controller": "User",
+    "method": "getFollowing",
+    "params": {
+      "username": "string"
+    }
+  },
   "tweet/delete": {
     "controller": "Tweet",
     "method": "delete"
