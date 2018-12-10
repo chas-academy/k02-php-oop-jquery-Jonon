@@ -104,7 +104,7 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
-    public function getUserById($profileUserId)
+    public function getUsersFollowingById($profileUserId)
     {
         $query = 'SELECT * FROM users 
         INNER JOIN followers ON users.id = followers.userId
