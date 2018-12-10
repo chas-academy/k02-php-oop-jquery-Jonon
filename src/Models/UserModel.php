@@ -104,6 +104,25 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
+    public function getUserById($profileUserId)
+    {
+        $query = 'SELECT * FROM users 
+        INNER JOIN followers ON users.id = followers.userId
+        WHERE followers.followerId = :followerId';
+
+        $sth = $this->db->prepare($query);
+
+        $params = [
+            'followerId' => $profileUserId
+        ];
+
+        $sth->execute($params);
+
+        $following = $sth->fetchAll(PDO::FETCH_CLASS, self::CLASSNAME);
+        
+        return $following;
+    }
+
     public function search($search)
     {
         $query = 'SELECT * FROM users

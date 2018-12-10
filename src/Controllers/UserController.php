@@ -5,6 +5,7 @@ namespace TwitterClone\Controllers;
 use TwitterClone\Exceptions\NotFoundException;
 use TwitterClone\Models\UserModel;
 use TwitterClone\Models\TweetModel;
+use TwitterClone\Models\FollowerModel;
 
 class UserController extends AbstractController
 {
@@ -149,7 +150,7 @@ class UserController extends AbstractController
 
         $userModel = new UserModel();
 
-        $properties = 
+        $properties =
         [
             'id' =>  $params->get('id'),
             'followerId' => $this->getAuthenticatedUserId()
@@ -160,6 +161,26 @@ class UserController extends AbstractController
         header("location: /profile/". $getUsername);
     }
     
+    public function getFollowing($username)
+    {
+        $userModel = new UserModel();
+        $user = $userModel->getByUsername($username);
+        $properties = [
+            'user' => $user
+        ];
+        // id from user profile
+        $profileUserId = $user->getId();
+
+        $userModel = new userModel();
+        $following = $userModel->getUserById($profileUserId);
+        $properties = [
+            'following' => $following
+        ];
+
+        var_dump($following);
+        
+        return $this->render('views/profile/profile_following.php', $properties);
+    }
 
     public function home()
     {
