@@ -172,7 +172,7 @@ class UserController extends AbstractController
         $profileUserId = $user->getId();
 
         $userModel = new userModel();
-        $following = $userModel->getUserById($profileUserId);
+        $following = $userModel->getUsersFollowingById($profileUserId);
         $properties = [
             'following' => $following
         ];
@@ -182,9 +182,25 @@ class UserController extends AbstractController
         return $this->render('views/profile/profile_following.php', $properties);
     }
 
-    public function getFollowers()
+    public function getFollowers($username)
     {
-        
+        $userModel = new UserModel();
+        $user = $userModel->getByUsername($username);
+        $properties = [
+            'user' => $user
+        ];
+        // id from user profile
+        $profileUserId = $user->getId();
+
+        $userModel = new userModel();
+        $followers = $userModel->getUsersFollowersById($profileUserId);
+        $properties = [
+            'followers' => $followers
+        ];
+
+        var_dump($followers);
+
+        return $this->render('views/profile/profile_followers.php', $properties);
     }
 
     public function home()
