@@ -123,6 +123,11 @@ class UserModel extends AbstractModel
         return $following;
     }
 
+    public function getUsersFollowersById($profileUserId)
+    {
+        
+    }
+
     public function search($search)
     {
         $query = 'SELECT * FROM users
