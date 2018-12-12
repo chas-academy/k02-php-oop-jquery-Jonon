@@ -111,6 +111,19 @@ class UserController extends AbstractController
             'tweets' => $tweets
         ];
 
+        $followerModel = new FollowerModel();
+
+        $params = [
+            'userId' => $user->getId(),
+            'followerId' => $this->getAuthenticatedUserId()
+        ];
+
+        // Check if logged in user is following profile user
+        $isFollowing = $followerModel->getIfFollowing($params);
+
+        var_dump($isFollowing);
+
+
         // Check if user is not logged in
         if (!$this->isAuthenticated()) {
             return $this->render('views/profile/profile_website_user.php', $properties);
