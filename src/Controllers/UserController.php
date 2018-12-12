@@ -125,7 +125,7 @@ class UserController extends AbstractController
 
         // Check if logged in user is following profile user
         $isFollowing = $followerModel->getIfFollowing($params);
-        
+
         
         // Check if logged in user is the same as the profile user and if logged in user is not following the profile user
         if (!$this->authenticatedUserIsSameAsProfileUser($user->getId()) && empty($isFollowing)) {
@@ -175,6 +175,11 @@ class UserController extends AbstractController
         $followUser = $userModel->follow($properties);
 
         header("location: /profile/". $getUsername);
+    }
+
+    public function unfollow()
+    {
+        return "";
     }
     
     public function getFollowing($username)
