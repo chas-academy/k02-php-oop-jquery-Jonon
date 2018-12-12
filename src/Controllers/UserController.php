@@ -121,17 +121,19 @@ class UserController extends AbstractController
         // Check if logged in user is following profile user
         $isFollowing = $followerModel->getIfFollowing($params);
 
-        var_dump($isFollowing);
-
-
         // Check if user is not logged in
         if (!$this->isAuthenticated()) {
             return $this->render('views/profile/profile_website_user.php', $properties);
         }
         
-        // Check if logged in user is the same as the profile user
-        if (!$this->authenticatedUserIsSameAsProfileUser($user->getId())) {
+        // Check if logged in user is the same as the profile user and if logged in user is not following the profile user
+        if (!$this->authenticatedUserIsSameAsProfileUser($user->getId()) && empty($isFollowing)) {
             return $this->render('views/profile/profile_logged_in_user.php', $properties);
+        }
+
+        // Check if logged in user is the same as the profile user and if logged in user is following the profile user
+        if (!$this->authenticatedUserIsSameAsProfileUser($user->getId()) && !empty($isFollowing)) {
+            return $this->render('views/profile/profile_logged_in_user_unfollow.php', $properties);
         }
             
         return $this->render('views/profile/profile_profile-user.php', $properties);
