@@ -10,7 +10,7 @@
                     <a href="#">Tweets</a>
                 </li>
                 <li class="navbar-item ml-5">
-                    <a href="#">Following</a>
+                    <a href="/profile/<?php echo $user->getusername()?>/following">Following</a>
                 </li>
                 <li class="navbar-item ml-5">
                     <a href="#">Followers</a>

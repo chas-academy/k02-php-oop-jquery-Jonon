@@ -20,7 +20,7 @@
                 <form action="/profile/follow" method="post">
                     <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
                     <input type="hidden" name="username" value="<?php echo $user->getUsername()?>"/>
-                    <button class="btn btn-outline-primary" type="submit">Follow</button>
+                    <button class="btn btn-outline-primary" type="submit">Unfollow</button>
                 </form>
         </div> 
     </div>
