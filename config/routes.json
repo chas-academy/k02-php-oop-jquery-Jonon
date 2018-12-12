@@ -31,6 +31,10 @@
     "controller": "User",
     "method": "follow"
   },
+  "profile/unfollow": {
+    "controller": "User",
+    "method": "unfollow"
+  },
   "profile/:username": {
     "controller": "User",
     "method": "getProfileByUsername",
