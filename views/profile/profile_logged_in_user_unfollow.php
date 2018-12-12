@@ -17,7 +17,7 @@
                 </li>
             </ul>
                 <div class=" ml-5 d-sm-none d-md-block  d-sm-block d-none">
-                <form action="/profile/follow" method="post">
+                <form action="/profile/unfollow" method="post">
                     <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
                     <input type="hidden" name="username" value="<?php echo $user->getUsername()?>"/>
                     <button class="btn btn-outline-primary" type="submit">Unfollow</button>
