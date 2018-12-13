@@ -104,6 +104,18 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
+    public function unfollow($properties)
+    {
+        $query = 'DELETE FROM followers 
+        where userid =:id AND followerId = :followerId';
+
+        $sth = $this->db->prepare($query);
+        $sth->bindValue(':id', $properties['id']);
+        $sth->bindValue(':followerId', $properties['followerId']);
+
+        $sth->execute();
+    }
+
     public function getUsersFollowingById($profileUserId)
     {
         $query = 'SELECT * FROM users 

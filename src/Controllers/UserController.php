@@ -179,7 +179,21 @@ class UserController extends AbstractController
 
     public function unfollow()
     {
-        return "";
+        $params = $this->request->getParams();
+        
+        $getUsername = $this->request->getParams()->getString('username');
+
+        $userModel = new UserModel();
+
+        $properties =
+        [
+            'id' =>  $params->get('id'),
+            'followerId' => $this->getAuthenticatedUserId()
+        ];
+
+        $unfollowUser = $userModel->unfollow($properties);
+
+        header("location: /profile/". $getUsername);
     }
     
     public function getFollowing($username)
