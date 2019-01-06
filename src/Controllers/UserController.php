@@ -240,22 +240,38 @@ class UserController extends AbstractController
 
     public function home()
     {
-        if ($this->request->isGet()) {
-            return $this->render('views/home.php', []);
-        } elseif ($this->request->isPost()) {
-            $params = $this->request->getParams();
-            //  get id from logged in user
-            $userId = $_SESSION['user']->getId();
-            $tweetModel = new TweetModel();
+        $tweetModel = new TweetModel();
+        $userModel = new UserModel();
 
-            $properties = [
-                'tweet' => $params->get('tweet'),
-                'id' => $userId
-            ];
-            //  send to model
-            $createTweet = $tweetModel->CreateTweet($properties);
-            return $this->render('views/home.php', []);
+         //  get id from logged in user
+        $userId = $this->getAuthenticatedUserId();
+        
+        try {
+            $tweets = $tweetModel->getTweetsByUsersFollowing($userId);
+        } catch (\Exception $e) {
+            $properties = ['errorMessage' => 'Something went wrong!'];
+            return $this->render('views/error.php', $properties);
         }
+
+        $properties = [
+            'tweets' => $tweets
+        ];
+
+        $params = $this->request->getParams();
+
+        $userProperties = [
+            'tweet' => $params->get('tweet'),
+            'id' => $userId
+        ];
+
+        try {
+            $createTweet = $tweetModel->CreateTweet($userProperties);
+        } catch (\Exception $e) {
+            $properties = ['errorMessage' => 'Something went wrong!'];
+            return $this->render('views/error.php', $properties);
+        }
+
+        return $this->render('views/home.php', $properties);
     }
 
     private function authenticatedUserIsSameAsProfileUser(int $id): bool

@@ -13,8 +13,6 @@ class TweetModel extends AbstractModel
     const CLASSNAME = '\TwitterClone\Domain\Tweet';
     const DTOCLASSNAME = '\TwitterClone\Domain\DtoTweetFromFollowedUser';
 
-    
-
     public function getTweets(string $username): array
     {
         $query = 'SELECT * FROM users
