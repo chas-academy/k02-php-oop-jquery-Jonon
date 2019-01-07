@@ -28,7 +28,7 @@
         <div class="col-md-4">
             <div class="info-card mt-3 ml-5">
                     <div class="card-body">
-                        <img class="align-self-start mr-3 rounded-circle profile--large" src="https://images.unsplash.com/photo-1542384701-c0e46e0eda04?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1339324b1b254b13747a87333861327f&auto=format&fit=crop&w=636&q=80" alt="Profile avatar">
+                        <img class="align-self-start mr-3 rounded-circle profile--large" src="https://api.adorable.io/avatars/285/jons.png" alt="Profile avatar">
                         <h5 class="card-title"><?php echo $user->getName();?></h5>
                         <h6 class="card-subtitle mb-2 text-muted"><?php echo $user->getUsername();?></h6>
                         <p class="card-text"><?php echo $user->getDescription()?></p>
@@ -42,7 +42,7 @@
         <?php
         foreach ($tweets as $tweet) :?>
             <div class="media border border-primary box-shadow-b mt-2 p-2 ">
-                <img class="align-self-start mr-3 rounded-circle profile--small" src="https://images.unsplash.com/photo-1542384701-c0e46e0eda04?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1339324b1b254b13747a87333861327f&auto=format&fit=crop&w=636&q=80" alt="profile avatar">
+                <img class="align-self-start mr-3 rounded-circle profile--small" src="https://api.adorable.io/avatars/285/jons.png" alt="profile avatar">
                 <div class="media-body">
                     <h5 class="mt-0"><?php echo $user->getName();?></h5>
 
