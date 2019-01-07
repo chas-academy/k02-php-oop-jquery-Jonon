@@ -1,5 +1,5 @@
 .default__background-image {
-    background-image: url(../images/default.jpg);
+    background-image: url(https://picsum.photos/1200/400/?random);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -28,7 +28,14 @@
     width: 45px;
 }
 
+.profile--medium {
+    height: 75px;
+    width: 75px;
+}
+
 .profile--large {
     height: 200px;
     width: 200px;
 }
+
+
