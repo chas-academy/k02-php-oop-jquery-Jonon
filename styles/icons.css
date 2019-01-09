@@ -11,13 +11,16 @@
 }
 
 
+.f-arrow-left:hover {
+    color: rgb(0, 0, 0)
+}
+
 .arrow {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
 }
-
 
 .arrow-up {
     width: 0; 
@@ -34,4 +37,4 @@
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid #010101;
-  }
+}
