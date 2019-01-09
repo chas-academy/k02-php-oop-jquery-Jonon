@@ -1,6 +1,8 @@
 <div class="container">
-    <a href="/profile/<?php echo $user->getUsername();?>">
-        <i class="feather f-arrow-left mt-2" data-feather="arrow-left"></i>
+    <!-- Go back to profile -->
+    <a href="/profile/<?php echo $user->getUsername();?>" class="d-flex align-self-center mt-2 w5-1r text-lighter-grey return-button">
+        <i class="feather f-arrow-left" data-feather="arrow-left"></i>
+        <span>Go back</span>
     </a>
     <div class="row mt-2">
     <?php foreach ($followers as $follows) :?>
