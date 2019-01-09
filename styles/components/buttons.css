@@ -30,3 +30,12 @@
 .btn--nostyling:hover .cross {
     color: rgb(0, 0, 0);
 }
+
+/* return button */
+
+.return-button:hover .f-arrow-left,
+.return-button:hover 
+{
+    color: #000000;
+    text-decoration: none;
+}
