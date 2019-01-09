@@ -209,10 +209,9 @@ class UserController extends AbstractController
         $userModel = new userModel();
         $following = $userModel->getUsersFollowingById($profileUserId);
         $properties = [
-            'following' => $following
+            'following' => $following,
+            'user' => $user
         ];
-
-        var_dump($following);
         
         return $this->render('views/profile/profile_following.php', $properties);
     }
@@ -230,10 +229,9 @@ class UserController extends AbstractController
         $userModel = new userModel();
         $followers = $userModel->getUsersFollowersById($profileUserId);
         $properties = [
-            'followers' => $followers
+            'followers' => $followers,
+            'user' => $user
         ];
-
-        var_dump($followers);
 
         return $this->render('views/profile/profile_followers.php', $properties);
     }
