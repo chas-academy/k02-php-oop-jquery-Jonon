@@ -1,4 +1,7 @@
 <div class="container">
+    <a href="/profile/<?php echo $user->getUsername();?>">
+        <i class="feather f-arrow-left mt-2" data-feather="arrow-left"></i>
+    </a>
     <div class="row mt-2">
     <?php foreach ($following as $follows) :?>
         <div class="col-sm-4">
