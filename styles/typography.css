@@ -23,3 +23,11 @@
 .text-lighter-grey {
     color: rgba(0, 0, 0, 0.5)
 }
+
+a.link-color-primary {
+    color: #0a98eb;
+}
+.link-color-primary:hover {
+    color: #5bbbf3;
+    text-decoration: none;
+}
