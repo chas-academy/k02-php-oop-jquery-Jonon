@@ -31,6 +31,10 @@
     color: rgb(0, 0, 0);
 }
 
+.btn--mobile {
+    height: 2.2rem;
+}
+
 /* return button */
 
 .return-button:hover .f-arrow-left,
