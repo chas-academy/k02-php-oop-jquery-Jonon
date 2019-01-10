@@ -20,6 +20,10 @@
     color: rgb(46, 46, 45);
 }
 
+.text-white {
+    color: #ffffff ;
+}
+
 .text-lighter-grey {
     color: rgba(0, 0, 0, 0.5)
 }
