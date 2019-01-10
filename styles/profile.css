@@ -6,13 +6,40 @@
     height: 450px;
     border-radius: 0;
     margin: 0px;
-    
+}
+
+@media (max-width: 575px) {
+    .default__background-image {
+        height: 150px;
+    }
 }
 
 /* Remove padding from jumbotron */
 .b-img {
     padding: 0px;
    
+}
+
+.profile-card {
+    margin-top: -11.5rem;
+}
+
+@media (max-width: 575px) {
+    .profile-card {
+        margin-top: -4.3rem;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .padding-nullify {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .profile-card_btn {
+        margin-top: 3.6rem;
+    }
 }
 
 .profile {
@@ -38,4 +65,18 @@
     width: 200px;
 }
 
+.profile--primary-size {
+    height: 200px;
+    width: 200px;
+}
 
+@media (max-width: 575px) {
+    .profile--primary-size {
+        height: 85px;
+        width: 85px;
+    }
+}
+
+.card-block-height {
+    min-height: 250px;
+}
