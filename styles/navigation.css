@@ -2,6 +2,11 @@
     height: 3rem;
 }
 
+.navbar-secondary {
+    height: 3.4rem;
+    padding-top: 0.5rem;
+}
+
 .bg-light {
     background-color: rgb(255, 255, 255);
 }
