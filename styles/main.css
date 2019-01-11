@@ -1,13 +1,13 @@
-@import url('navigation.css');
-@import url('dropdown-menu.css');
-@import url('profile.css');
+@import url('blocks/navigation.css');
+@import url('blocks/dropdown-menu.css');
+@import url('blocks/profile.css');
 
-@import url('typography.css');
-@import url('colors.css');
-@import url('components/form.css');
-@import url('components/buttons.css');
-@import url('icons.css');
-@import url('utilities.css');
+@import url('blocks/typography.css');
+@import url('blocks/colors.css');
+@import url('blocks/components/form.css');
+@import url('blocks/components/buttons.css');
+@import url('blocks/icons.css');
+@import url('blocks/utilities.css');
 
 
 .jumbo-home {
