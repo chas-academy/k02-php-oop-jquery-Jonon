@@ -1,0 +1,17 @@
+.main-navigation {
+    height: 3rem;
+}
+
+.main-navigation--bg-light {
+    background-color: rgb(255, 255, 255);
+}
+
+.main-navigation-link:hover .f-home,
+.main-navigation-link:hover .f-bell,
+.main-navigation-link:hover .f-mail,
+.main-navigation-link:hover .f-search,
+.main-navigation-link:hover 
+{
+    color: #138496;
+    text-decoration: none;
+}

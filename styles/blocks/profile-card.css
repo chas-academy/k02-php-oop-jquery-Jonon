@@ -1,31 +1,9 @@
-.default__background-image {
-    background-image: url(https://picsum.photos/1200/400/?random);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    height: 450px;
-    border-radius: 0;
-    margin: 0px;
-}
-
-@media (max-width: 575px) {
-    .default__background-image {
-        height: 150px;
-    }
-}
-
-/* Remove padding from jumbotron */
-.b-img {
-    padding: 0px;
-   
-}
-
-.profile-card {
+.profile-card__body {
     margin-top: -11.5rem;
 }
 
 @media (max-width: 575px) {
-    .profile-card {
+    .profile-card__body {
         margin-top: -4.3rem;
         box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
         padding-left: 1rem;
@@ -40,14 +18,6 @@
     .profile-card_btn {
         margin-top: 3.6rem;
     }
-}
-
-.profile {
-    background-image: url('../images/profile_default.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: 1.3rem;
-    
 }
 
 .profile--small {

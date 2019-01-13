@@ -1,0 +1,15 @@
+.profile-banner__image {
+    background-image: url(https://picsum.photos/1200/400/?random);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 450px;
+    border-radius: 0;
+    margin: 0px;
+}
+
+@media (max-width: 575px) {
+    .profile-banner__image {
+        height: 150px;
+    }
+}

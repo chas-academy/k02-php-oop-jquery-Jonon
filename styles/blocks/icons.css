@@ -1,3 +1,4 @@
+/*default styling*/
 .feather {
     color: rgba(0, 0, 0, 0.5)
 }
@@ -10,31 +11,6 @@
     color: rgba(255, 0, 0, 0.849)
 }
 
-
 .f-arrow-left:hover {
     color: rgb(0, 0, 0)
-}
-
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #010101;
-  }
-
-  
-  .arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #010101;
 }

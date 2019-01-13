@@ -1,0 +1,17 @@
+.tweet-box__text-area {
+    height: 2.4rem;
+    width: 20rem;
+}
+
+.tweet-box__text-area--border-radius {
+    border-radius: 3%;
+}
+
+
+.tweet-box__text--area-resize-none {
+    resize: none;
+}
+
+.tweet-box__text-area--text-center-placeholder::placeholder {
+    text-align: center;
+}

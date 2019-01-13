@@ -1,11 +1,5 @@
 /* Utilities */
 
-.aligner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .list-style {
     list-style: none;
 }
@@ -21,7 +15,7 @@
 .box-shadow-b {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
 }
-
+/* disable link */
 .disable-a, .disable-a:hover {
     text-decoration: none;
     color: inherit;
@@ -51,24 +45,10 @@
     line-height: 1rem;
 }
 
-.textarea-resize-none {
-    resize: none;
-}
-
-.text-center-placeholder::-webkit-input-placeholder,
-.text-center-placeholder:-moz-placeholder,
-.text-center-placeholder::-moz-placeholder,
-.text-center-placeholder:-ms-input-placeholder,
-.text-center-placeholder::placeholder
-{
-    text-align: center;
-}
-
-
-.text-center-placeholder::placeholder {
-    text-align: center;
-}
-
 .text-word-break-all {
     word-break: break-all;
+}
+
+.push-content {
+    margin-top: 4rem;
 }

@@ -1,9 +1,9 @@
 <div class="container">
-    <form class="mt-3" action="/home" method="post">
-        <div class="form-group row justify-content-center">
-            <textarea class="textarea-resize-none text-center-placeholder textarea_tweet" placeholder="What's happening?" name="tweet"></textarea>
+    <form class="tweet-form mt-3" action="/home" method="post">
+        <div class="tweet-box form-group row justify-content-center">
+            <textarea class="tweet-box__text-area tweet-box__text-area--border-radius tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder" placeholder="What's happening?" name="tweet"></textarea>
             <div class="ml-5">
-                <button class="btn btn-primary" type="submit">Tweet</button>
+                <button class="tweet-box__btn btn btn-primary" type="submit">Tweet</button>
             </div>        
         </div>
     </form>

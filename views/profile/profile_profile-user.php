@@ -1,8 +1,8 @@
-<div class="container-fluid b-img">
-    <div id="jumbo" class="jumbotron default__background-image">
+<div class="container-fluid b-img p-0 profile-banner">
+    <div id="jumbo" class="jumbotron profile-banner__image">
     </div>
 </div>
-<nav class="navbar-secondary navbar-light bg-light border_bottom box-shadow-b d-sm-none d-md-block d-sm-block d-none">
+<nav class="profile-navigation navbar-light bg-light border_bottom box-shadow-b d-sm-none d-md-block d-sm-block d-none">
     <div class="d-flex justify-content-end ">
         <div class="mr-5">
             <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#ModalCenter">Edit Profile
@@ -15,9 +15,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 padding-nullify">
-            <div class="info-card mt-3 ">
-                <div class="card-body profile-card ">
-                    <div class="d-flex justify-content-between">
+            <div class="info-card mt-3 profile-card">
+                <div class="card-body profile-card__body">
+                    <div class="d-flex justify-content-between profile-card__media">
                         <img class="align-self-start mr-3 rounded-circle profile--primary-size" src="https://api.adorable.io/avatars/285/jons.png" alt="Profile avatar">
                         <button type="button" class="btn btn--mobile btn-outline-primary profile-card_btn d-block d-sm-none" data-toggle="modal" data-target="#ModalCenter">Edit Profile</button>
                     </div>
