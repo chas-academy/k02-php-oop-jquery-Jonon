@@ -9,35 +9,23 @@
             </div>
         </div> 
     </form>
-    <div class="row">
+    <div class="row mt-2">
     <?php foreach ($users as $user) :?>
-    <div class="card-group col-sm-4 mb-4">
-    <a href="/profile/<?php echo $user->getUsername()?>">
-        <!-- Card -->
-        <div class="card col testimonial-card">
-        <!-- Background color -->
-        <div class="card-up indigo lighten-1"></div>
-        <!-- Avatar -->
-        <div class="avatar mx-auto white mt-1">
-            <img src="https://images.unsplash.com/photo-1542384701-c0e46e0eda04?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1339324b1b254b13747a87333861327f&auto=format&fit=crop&w=636&q=80" class="rounded-circle profile--large" alt="woman avatar">
+        <div class="col-sm-4">
+            <a class="disable-a" href="/profile/<?php echo $user->getUsername()?>">
+                <div class="card">
+                    <img class="card-img-top" src="https://picsum.photos/300/100/?random" alt="Card image cap">
+                    <img class="d-flex ml-3 rounded-circle profile--medium mt-1-invert" src="https://api.adorable.io/avatars/285/jons.png" alt="Generic placeholder image">
+                    <div class="card-block card-block-height">
+                        <h4 class="card-title"><?php echo $user->getName()?></h4>
+                        <h6 class="card-title"><?php echo '@' . $user->getUsername()?></h6>
+                        <p class="card-text"><?php echo $user->getDescription()?></p>
+                    </div>
+                </div>
+            </a>
         </div>
-        <!-- Content -->
-        <div class="card-body">
-            <!-- Name -->
-            <h4 class="card-title"><?php echo $user->getName()?></h4>
-            <hr>
-            <!-- Quotation -->
-            <p><?php echo $user->getDescription()?></p>
-        </div>
-        </div>
-<!-- Card -->
-</a>
-    </div>
-    <?php endforeach?>
+    <?php endforeach; ?>
     </div>
 </div>
-
-
-
 
 
