@@ -1,0 +1,10 @@
+
+
+.user-card__body-text {
+    height: 3rem;
+    overflow: hidden;
+}
+
+.user-card--shadow {
+    box-shadow: 0 3px 3px -2px rgba(0,0,0,0.25);
+}
