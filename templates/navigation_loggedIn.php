@@ -32,12 +32,12 @@
                 <nav class="dropdown__navigation dropdown-active">
                     <ul class="dropdown__list">
                         <li class="dropdown__list-item">
-                            <a class="dropdown__list-item-link btn btn-red" href="/profile/<?php echo $_SESSION['user']->getUsername()?>" >Profile
+                            <a class="dropdown__list-item-link btn btn--secondary" href="/profile/<?php echo $_SESSION['user']->getUsername()?>" >Profile
                         </a></li>
                         <li class="dropdown__list-item mt-2">
-                            <a class="dropdown__list-item-link  btn btn-red" href="#">Settings</a></li>
+                            <a class="dropdown__list-item-link  btn btn--secondary" href="#">Settings</a></li>
                         <li class="dropdown__list-item mt-4">
-                            <a class="dropdown__list-item-link btn btn-outline-red" href="/logout">Log out</a></li>
+                            <a class="dropdown__list-item-link btn btn-outline--secondary" href="/logout">Log out</a></li>
                     </ul>
                 </nav>
             </div>
