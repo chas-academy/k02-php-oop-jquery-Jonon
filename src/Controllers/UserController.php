@@ -238,6 +238,11 @@ class UserController extends AbstractController
 
     public function home()
     {
+        // redirect to frot page if not an athenticated user
+        if (!$this->isAuthenticated()) {
+            header('Location: /');
+        }
+
         $tweetModel = new TweetModel();
         $userModel = new UserModel();
 
