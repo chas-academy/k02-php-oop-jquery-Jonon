@@ -78,7 +78,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-        <form class="d-sm-none d-md-block  d-sm-block d-none" method="post" action="/profile/edit">
+        <form class="" method="post" action="/profile/edit">
         <div class="modal-body">
             <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
             <div class="form-group">
