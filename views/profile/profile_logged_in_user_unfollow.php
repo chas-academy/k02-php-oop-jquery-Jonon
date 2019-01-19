@@ -8,7 +8,7 @@
             <form action="/profile/unfollow" method="post">
                 <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
                 <input type="hidden" name="username" value="<?php echo $user->getUsername()?>"/>
-                <button class="btn btn-outline-primary" type="submit">Unfollow</button>
+                <button class="btn btn-outline--primary" type="submit">Unfollow</button>
             </form>
         </div>
     </div>
@@ -24,7 +24,7 @@
                         <form action="/profile/unfollow" method="post">
                             <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
                             <input type="hidden" name="username" value="<?php echo $user->getUsername()?>"/>
-                            <button class="btn btn--mobile btn-outline-primary profile-card_btn d-block d-sm-none" type="submit">Unfollow</button>
+                            <button class="btn btn--mobile btn-outline--primary profile-card_btn d-block d-sm-none" type="submit">Unfollow</button>
                         </form>
                     </div>
                     <h5 class="card-title mt-2"><?php echo $user->getName();?></h5>

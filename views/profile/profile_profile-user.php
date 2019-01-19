@@ -5,7 +5,7 @@
 <nav class="profile-navigation navbar-light bg-light border_bottom box-shadow-b d-sm-none d-md-block d-sm-block d-none">
     <div class="d-flex justify-content-end ">
         <div class="mr-5">
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#ModalCenter">Edit Profile
+            <button type="button" class="btn btn-outline--primary" data-toggle="modal" data-target="#ModalCenter">Edit Profile
         </button>
         </div>
     </div>
@@ -19,7 +19,7 @@
                 <div class="card-body profile-card__body">
                     <div class="d-flex justify-content-between profile-card__media">
                         <img class="align-self-start mr-3 rounded-circle profile--primary-size" src="https://api.adorable.io/avatars/285/jons.png" alt="Profile avatar">
-                        <button type="button" class="btn btn--mobile btn-outline-primary profile-card_btn d-block d-sm-none" data-toggle="modal" data-target="#ModalCenter">Edit Profile</button>
+                        <button type="button" class="btn btn--mobile btn-outline--primary profile-card_btn d-block d-sm-none" data-toggle="modal" data-target="#ModalCenter">Edit Profile</button>
                     </div>
                     <h5 class="card-title mt-2"><?php echo $user->getName();?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $user->getUsername();?></h6>

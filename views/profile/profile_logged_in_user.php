@@ -9,7 +9,7 @@
             <form action="/profile/follow" method="post">
                 <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
                 <input type="hidden" name="username" value="<?php echo $user->getUsername()?>"/>
-                <button class="btn btn-outline-primary" type="submit">Follow</button>
+                <button class="btn btn-outline--primary" type="submit">Follow</button>
             </form>
         </div>
     </div>
@@ -25,7 +25,7 @@
                         <form action="/profile/follow" method="post">
                             <input type="hidden" name="id" value="<?php echo $user->getId()?>"/>
                             <input type="hidden" name="username" value="<?php echo $user->getUsername()?>"/>
-                            <button class="btn btn--mobile btn-outline-primary profile-card_btn d-block d-sm-none" type="submit">Follow</button>
+                            <button class="btn btn--mobile btn-outline--primary profile-card_btn d-block d-sm-none" type="submit">Follow</button>
                         </form>
                     </div>
                     <h5 class="card-title mt-2"><?php echo $user->getName();?></h5>
