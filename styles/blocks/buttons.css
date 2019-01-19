@@ -6,7 +6,17 @@
 }
 
 /* primary button */
+.btn--primary {
+    background: linear-gradient(90deg, #F4528C -130.21%, #FFB249 152.43%);
+    color: #ffffff;
+    border: none;
+}
 
+.btn--primary:hover {
+    background: linear-gradient(90deg, #FE1E6F -130.21%, #FFAC3A 152.43%);
+    color: #ffffff;
+    border: none;
+}
 
 /* secondary button */
 .btn--secondary {
