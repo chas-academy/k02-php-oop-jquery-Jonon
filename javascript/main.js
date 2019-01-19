@@ -22,7 +22,6 @@ $(document).ready(() => {
     })
 
 
-
-
+    // Add active class to active menu element
+    $('#mainnav[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
 })
-

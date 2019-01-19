@@ -2,24 +2,24 @@
     <div class="d-sm-flex justify-content-between">     
         <div class="d-flex w-100 justify-content-around">
             <div class="d-flex aligner">
-                <a href="/home" class="d-flex align-self-center text-grey  main-navigation-link">
+                <a href="/home" id="mainnav" class="d-flex align-self-center text-grey  main-navigation-link" >
                     <i data-feather="home" class="feather f-home"></i>
-                    <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none ">Home</span>
+                    <span class="link-text ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none ">Home</span>
                 </a>
 
-                <a href="/" class="d-flex align-self-center ml-4 text-grey main-navigation-link">
+                <a href="#" id="mainnav" class="d-flex align-self-center ml-4 text-grey main-navigation-link linktest" >
                     <i data-feather="bell" class="feather f-bell"></i>
-                    <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Notifications</span>
+                    <span class="link-text ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Notifications</span>
                 </a>
 
-                <a href="/" class="d-flex align-self-center ml-4 text-grey main-navigation-link">    
+                <a href="#" id="mainnav" class="d-flex align-self-center ml-4 text-grey main-navigation-link">    
                     <i data-feather="mail" class="feather f-mail"></i>
-                    <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Messages</span>
+                    <span class="link-text ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Messages</span>
                 </a>
 
-                <a href="/search" class="d-flex align-self-center ml-4 text-grey main-navigation-link">
+                <a href="/search" id="mainnav" class="d-flex align-self-center ml-4 text-grey main-navigation-link">
                     <i data-feather="search" class="feather f-search"></i>
-                    <span class="ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Search</span>
+                    <span class="link-text ml-1 font-josefin-slab d-sm-none d-md-block  d-sm-block d-none">Search</span>
                 </a>   
             </div>
 
@@ -32,10 +32,10 @@
                 <nav class="dropdown__navigation dropdown-active">
                     <ul class="dropdown__list">
                         <li class="dropdown__list-item">
-                            <a class="dropdown__list-item-link btn btn--secondary" href="/profile/<?php echo $_SESSION['user']->getUsername()?>" >Profile
+                            <a class="dropdown__list-item-link btn btn--drop-down-menu" href="/profile/<?php echo $_SESSION['user']->getUsername()?>" >Profile
                         </a></li>
                         <li class="dropdown__list-item mt-2">
-                            <a class="dropdown__list-item-link  btn btn--secondary" href="#">Settings</a></li>
+                            <a class="dropdown__list-item-link  btn btn--drop-down-menu" href="#">Settings</a></li>
                         <li class="dropdown__list-item mt-4">
                             <a class="dropdown__list-item-link btn btn-outline--secondary" href="/logout">Log out</a></li>
                     </ul>

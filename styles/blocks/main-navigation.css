@@ -12,6 +12,10 @@
 .main-navigation-link:hover .f-search,
 .main-navigation-link:hover 
 {
-    color: #138496;
+    color: #52aaf4;
     text-decoration: none;
+}
+
+a.active, a.active .feather {
+    color: #52aaf4;
 }
