@@ -2,7 +2,7 @@
     <div class="container">
         <h1 class="jumbotron-heading font-oswald">Welcome to TwitterClone!</h1>
         <p class="lead text-muted font-oswald">Join TwitterClone today to follow your friends and take part of interssting conversations</p>
-        <a class ="btn btn-info" href="/register">Register</a>
+        <a class ="btn btn--primary" href="/register">Register</a>
     </div>
 </section>
 <div class="container">
