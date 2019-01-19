@@ -13,7 +13,7 @@
     <?php
     foreach ($tweets as $tweet) :?>
     <div class="row justify-content-center">
-        <div class="col-sm-8 ">
+        <div class="col-sm-8 padding-nullify">
             <div class="media border border-primary box-shadow-b mt-2 p-2">
                 <img class="align-self-start mr-3 rounded-circle profile--small" src="https://api.adorable.io/avatars/285/jons.png" alt="profile avatar">
                 <div class="media-body">
