@@ -1,3 +1,7 @@
+.dropdown {
+    font-family: 'Oswald', sans-serif;
+}
+
 .dropdown__icon-button {
     cursor: pointer;
     border: 2px solid rgba(0, 0, 0, 0.5);
