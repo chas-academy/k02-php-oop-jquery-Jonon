@@ -3,7 +3,7 @@
     </div>
 </div>
 
-<nav class="profile-navigation navbar-light bg-light border_bottom box-shadow-b d-sm-none d-md-block d-sm-block d-none">
+<nav class="profile-bar navbar-light bg-light border_bottom box-shadow-b d-sm-none d-md-block d-sm-block d-none">
     <div class="d-flex justify-content-end ">
         <div class="mr-5">
             <form action="/profile/follow" method="post">
