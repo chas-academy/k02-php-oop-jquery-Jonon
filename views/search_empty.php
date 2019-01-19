@@ -5,7 +5,7 @@
                 <input type="text" class="form-control" name="search" placeholder="Search">
             </div>
             <div class="col-auto form-group">
-                <button type="submit" class="btn btn-primary mb-2 form-control ">Search</button>
+                <button type="submit" class="btn btn--primary mb-2 form-control ">Search</button>
             </div>
         </div> 
     </form>
