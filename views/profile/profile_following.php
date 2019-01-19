@@ -27,7 +27,7 @@
     <?php
     foreach ($following as $follows) :?>
     <a class="disable-a" href="/profile/<?php echo $follows->getUsername()?>">
-        <div class="pl-2 media user-card user-card--shadow mt-2">
+        <div class="pl-2 media user-card user-card--border-bottom user-card--shadow mt-2">
             <img class="d-flex mr-3 rounded-circle profile--small" src="https://api.adorable.io/avatars/285/jons.png" alt="Generic placeholder image">
             <div class="media-body user-card__body">
                 <h5 class="card-title"><?php echo $follows->getName()?></h5>

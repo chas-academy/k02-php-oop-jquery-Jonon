@@ -41,7 +41,7 @@
         <div class="col-md-6 padding-nullify">
         <?php
         foreach ($tweets as $tweet) :?>
-            <div class="media tweet border border-primary tweet--box-shadow mt-2 p-2 ">
+            <div class="media tweet border border-primary tweet-border-bottom tweet--box-shadow mt-2 p-2 ">
                 <img class="align-self-start mr-3 rounded-circle profile--small" src="https://api.adorable.io/avatars/285/jons.png" alt="profile avatar">
                 <div class="media-body">
                     <div class="d-flex justify-content-between">
