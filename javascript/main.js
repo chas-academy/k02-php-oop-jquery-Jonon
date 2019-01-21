@@ -1,7 +1,8 @@
 //on profile icon button dropdown option
 
 $(document).ready(() => {
-    $('.dropdown__icon-button').on('click', () => {
+    $('.dropdown__icon-button').on('click', (e) => {
+        e.stopPropagation();
         $('.dropdown-active').toggle();
         if ($('.arrow-down').toggleClass('arrow-up')) {
             $('.arrow-up').toggleClass('arrow-down');
@@ -18,7 +19,14 @@ $(document).ready(() => {
         if ($('.arrow-up').toggleClass('arrow-down')) {
             $('.arrow-down').toggleClass('arrow-up');
         }
-        
+    })
+
+    // close dropdown on click outside menu
+    $("body").on('click', () => {
+        $('.dropdown-active').hide();
+        if ($('.arrow-up').toggleClass('arrow-down')) {
+            $('.arrow-down').toggleClass('arrow-up');
+        }
     })
 
 
