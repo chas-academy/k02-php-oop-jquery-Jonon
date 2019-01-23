@@ -3,33 +3,23 @@
 $(document).ready(() => {
     $('.dropdown__icon-button').on('click', (e) => {
         e.stopPropagation();
-        $('.dropdown-active').toggle();
-        if ($('.arrow-down').toggleClass('arrow-up')) {
-            $('.arrow-up').toggleClass('arrow-down');
-        } 
-        else {
-            $('.arrow-down').toggleClass('arrow-up')
-        }
-        $('.arrow-down').toggleClass('arrow-up')
-       
+        $('.dropdown-active').fadeToggle(400);
+        $('.arrow-down').toggleClass('rotate');
+        
     })
 
     $('.dropdown-active').on('mouseleave', () => {
-        $('.dropdown-active').hide()
-        if ($('.arrow-up').toggleClass('arrow-down')) {
-            $('.arrow-down').toggleClass('arrow-up');
-        }
+        $('.dropdown-active').fadeOut(400)
+        $('.arrow-down').removeClass('rotate');
     })
 
     // close dropdown on click outside menu
     $("body").on('click', () => {
-        $('.dropdown-active').hide();
-        if ($('.arrow-up').toggleClass('arrow-down')) {
-            $('.arrow-down').toggleClass('arrow-up');
-        }
+        $('.dropdown-active').fadeOut(400)
+        $('.arrow-down').removeClass('rotate');
     })
 
-
+    
     // Add active class to active menu element
     $('#mainnav[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
 })
