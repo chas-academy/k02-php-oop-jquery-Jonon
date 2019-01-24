@@ -1,14 +1,14 @@
 <div class="container">
-    <form class="form-row justify-content-center tweet-form mt-3 d-none d-sm-block" action="/home" method="post">
-        <div class="tweet-box row col-auto justify-content-center">
-            <div class=" form-group mb-2 col-auto ">
+    <div class="d-none d-sm-block">
+        <form class="tweet-form form-inline justify-content-center mt-3">
+            <div class="tweet-box form-group mx-sm-3 mb-2">
                 <textarea class="tweet-box__text-area tweet-box__text-area--border-radius tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet"></textarea>
             </div>
-            <div class="col-auto form-group ml-sm-5">
-                <button class="tweet-box__btn btn btn--primary form-control" type="submit">Tweet</button>
-            </div>        
-        </div>
-    </form>
+            <button type="submit" class="tweet-box__btn btn btn--primary mb-2 ">Tweet</button>
+        </form>
+    </div>
+    
+
     <div class="fixed-bottom d-flex justify-content-end mr-3 mb-2 d-block d-sm-none">
         <button class="tweet-button btn--nostyling btn--tweet-size   btn--primary--tweet">
             <div class="btn--primary btn--tweet rounded-circle p-2 btn--tweet-size d-flex align-items-center justify-content-center tweet-bx">
