@@ -13,6 +13,7 @@
 @import url('blocks/buttons.css');
 @import url('blocks/icons.css');
 @import url('blocks/utilities.css');
+@import url('blocks/main-modal.css');
 
 /* push content down from top navbar */
 body {

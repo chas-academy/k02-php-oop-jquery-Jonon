@@ -9,15 +9,13 @@
             </div>        
         </div>
     </form>
-    <div class="fixed-bottom test d-flex justify-content-end mr-3 mb-2">
-        <button class="btn--nostyling btn--tweet-size d-block d-sm-none  btn--primary--tweet">
+    <div class="fixed-bottom d-flex justify-content-end mr-3 mb-2 d-block d-sm-none">
+        <button class="tweet-button btn--nostyling btn--tweet-size   btn--primary--tweet">
             <div class="btn--primary btn--tweet rounded-circle p-2 btn--tweet-size d-flex align-items-center justify-content-center tweet-bx">
                 <i class="feather" data-feather="feather"></i>
             </div>
         </button>
-    </div>
-    
-        
+    </div> 
 
     <?php
     foreach ($tweets as $tweet) :?>
@@ -37,4 +35,14 @@
         </div>
     </div>
     <?php endforeach; ?>
+</div>
+
+<div class="main-modal">
+    <div class="main-modal-content">
+        <button class="btn--nostyling close" type="submit"><i data-feather="x" class="cross"></i></button>
+        <h3>Tweet something</h3>
+        <form class="tweet-creation__form" action="/home" method="post">
+        <textarea class="tweet-box__text-area tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet" ></textarea>
+        <button class="tweet-box__btn btn btn--primary form-control" type="submit">Tweet</button>
+    </div>
 </div>

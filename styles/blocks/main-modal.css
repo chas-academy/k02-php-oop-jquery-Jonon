@@ -1,0 +1,40 @@
+.main-modal {
+    width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	/* whole background stays darkened */
+	position: fixed;
+	top: 3rem;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	display: none;
+	z-index: 100;
+}
+
+.main-modal-content {
+    width: 100%;
+	height: 320px;
+	background-color: white;
+	border-radius: 4px;
+	text-align: center;
+	padding: 1rem;
+	position: relative;
+  }
+
+  .main-modal input, .main-modal textarea, .main-modal button, .main-modal h3 {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .close {
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 42px;
+	cursor: pointer;
+}
+
+.main-modal textarea {
+    height: 10rem;
+}
