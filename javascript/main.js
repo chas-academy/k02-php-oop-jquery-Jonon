@@ -22,4 +22,16 @@ $(document).ready(() => {
     
     // Add active class to active menu element
     $('#mainnav[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+
+    $('.tweet-button').on('click', () => {
+        $('.main-modal').show();
+        $('.tweet-button').hide();
+      
+    })
+
+    $('.close').on('click', () => {
+        $('.main-modal').hide();
+        $('.tweet-button').show();
+    })
+    
 })
