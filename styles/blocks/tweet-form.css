@@ -1,6 +1,6 @@
 .tweet-box__text-area {
     height: 2.4rem;
-    width: 20rem;
+    width: 75%;
 }
 
 .tweet-box__text-area--border-radius {
@@ -14,4 +14,8 @@
 
 .tweet-box__text-area--text-center-placeholder::placeholder {
     text-align: center;
+}
+
+.tweet-form__tweet-button {
+    display: none;
 }

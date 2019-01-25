@@ -1,13 +1,27 @@
 <div class="container">
-    <div class="d-none d-sm-block">
+    <!-- <div class="d-none d-sm-block">
         <form class="tweet-form form-inline justify-content-center mt-3">
             <div class="tweet-box form-group mx-sm-3 mb-2">
                 <textarea class="tweet-box__text-area tweet-box__text-area--border-radius tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet"></textarea>
             </div>
             <button type="submit" class="tweet-box__btn btn btn--primary mb-2 ">Tweet</button>
         </form>
+    </div> -->
+
+    <div class=" d-none d-sm-block">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 ">
+                <form class="tweet-form  mt-3 ">
+                    <div class="tweet-box form-group mb-2 d-flex justify-content-center">
+                        <textarea class="tweet-box__text-area tweet-box__text-area--border-radius tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet"></textarea>
+                    </div>
+                    <div class=" d-flex justify-content-center">
+                        <button type="submit" class="tweet-form__tweet-button tweet-box__btn btn btn--primary w-75 mb-2">Tweet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    
 
     <div class="fixed-bottom d-flex justify-content-end mr-3 mb-2 d-block d-sm-none">
         <button class="tweet-button btn--nostyling btn--tweet-size   btn--primary--tweet">
