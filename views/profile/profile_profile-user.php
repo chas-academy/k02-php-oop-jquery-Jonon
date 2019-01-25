@@ -45,7 +45,7 @@
                 <img class="align-self-start mr-3 rounded-circle profile--small" src="https://api.adorable.io/avatars/285/jons.png" alt="profile avatar">
                 <div class="media-body">
                     <div class="d-flex justify-content-between">
-                        <h5 class="mt-0"><?php echo $user->getName();?></h5>
+                    <a href="/profile/<?php echo $user->getUsername()?>"><h5 class="tweet-header mt-0"><?php echo $user->getName();?></h5></a>
                         <form method="post" action="/tweet/delete">
                             <input type="hidden" name="Id" value="<?php echo $user->getId()?>"/>
                             <input type="hidden" name="tweetId" value="<?php echo $tweet->getTweetId()?>"/>

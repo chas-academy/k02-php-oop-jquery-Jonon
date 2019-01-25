@@ -28,3 +28,7 @@ p {
 .font-Quattrocento {
     font-family: 'Quattrocento', serif;
 }
+
+a:hover {
+    text-decoration: none;
+}

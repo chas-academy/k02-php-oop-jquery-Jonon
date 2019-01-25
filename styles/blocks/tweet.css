@@ -11,6 +11,15 @@
     }
 
     .tweet-border-bottom {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(0,0,0,0.25);
     }
+}
+
+a .tweet-header {
+    color: #3E4753;
+    display: inline-block
+}
+
+a .tweet-header:hover {
+    color: #52aaf4;
 }

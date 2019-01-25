@@ -37,7 +37,7 @@
             <div class="media tweet border border-primary tweet-border-bottom tweet--box-shadow mt-2 p-2 ">
                 <img class="align-self-start mr-3 rounded-circle profile--small" src="https://api.adorable.io/avatars/285/jons.png" alt="profile avatar">
                 <div class="media-body">
-                    <h5 class="mt-0"><?php echo $user->getName();?></h5>
+                <a href="/profile/<?php echo $user->getUsername()?>"><h5 class="tweet-header mt-0"><?php echo $user->getName();?></h5></a>
 
                     <p><?php  echo $tweet->getTweet();?></p>
                     <nav class="">
