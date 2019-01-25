@@ -20,11 +20,16 @@
 	text-align: center;
 	padding: 1rem;
 	position: relative;
+	top: 1%;
   }
 
   .main-modal input, .main-modal textarea, .main-modal button, .main-modal h3 {
     margin: 1rem auto;
     display: block;
+  }
+
+  .main-modal__text-area {
+	height: 2.4rem;
   }
 
   .close {

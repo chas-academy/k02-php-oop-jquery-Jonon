@@ -56,7 +56,7 @@
         <button class="btn--nostyling close" type="submit"><i data-feather="x" class="cross"></i></button>
         <h3>Tweet something</h3>
         <form class="tweet-creation__form" action="/home" method="post">
-        <textarea class="tweet-box__text-area tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet" ></textarea>
+        <textarea class="main-modal__text-area tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet" ></textarea>
         <button class="tweet-box__btn btn btn--primary form-control" type="submit">Tweet</button>
     </div>
 </div>
