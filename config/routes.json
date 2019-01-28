@@ -59,5 +59,9 @@
   "tweet/delete": {
     "controller": "Tweet",
     "method": "delete"
+  },
+  "settings": {
+    "controller": "User",
+    "method": "viewSettings"
   }
 }
