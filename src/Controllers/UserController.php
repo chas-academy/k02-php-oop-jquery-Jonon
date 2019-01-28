@@ -277,6 +277,11 @@ class UserController extends AbstractController
         return $this->render('views/home.php', $properties);
     }
 
+    public function viewSettings()
+    {
+        return $this->render('views/viewSettings.php', []);
+    }
+
     private function authenticatedUserIsSameAsProfileUser(int $id): bool
     {
         return $_SESSION['user']->getId() == $id;
