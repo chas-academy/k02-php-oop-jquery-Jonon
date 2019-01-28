@@ -29,6 +29,11 @@ abstract class AbstractController
         return $_SESSION['user']->getId();
     }
 
+    protected function redirect(string $path): string
+    {
+        header("Location: $path ");
+    }
+
     protected function render(string $template, array $params): string
     {
         extract($params);
