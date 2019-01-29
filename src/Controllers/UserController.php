@@ -323,8 +323,8 @@ class UserController extends AbstractController
             $properties = ['errorMessage' => 'Something went wrong!'];
             return $this->render('views/error.php', $properties);
         }
-
-        $this->redirect("/home");
+        // log out user to destroy session
+        $this->redirect("/logout");
     }
 
     private function authenticatedUserIsSameAsProfileUser(int $id): bool
