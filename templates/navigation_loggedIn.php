@@ -35,7 +35,7 @@
                             <a class="dropdown__list-item-link btn btn--drop-down-menu" href="/profile/<?php echo $_SESSION['user']->getUsername()?>" >Profile
                         </a></li>
                         <li class="dropdown__list-item mt-2">
-                            <a class="dropdown__list-item-link  btn btn--drop-down-menu" href="#">Settings</a></li>
+                            <a class="dropdown__list-item-link  btn btn--drop-down-menu" href="/settings">Settings</a></li>
                         <li class="dropdown__list-item mt-4">
                             <a class="dropdown__list-item-link btn btn-outline--secondary" href="/logout">Log out</a></li>
                     </ul>
