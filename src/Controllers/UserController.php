@@ -279,7 +279,37 @@ class UserController extends AbstractController
 
     public function viewSettings()
     {
+        if (!$this->isAuthenticated()) {
+            $this->redirect("/home");
+        };
+        
         return $this->render('views/viewSettings.php', []);
+    }
+
+    public function updateAccountSettings()
+    {
+        $params = $this->request->getParams();
+        var_dump($params);
+        
+        $userModel = new UserModel();
+
+        $id = $this->getAuthenticatedUserId();
+
+        $properties =
+        [
+            'id' => $id,
+            'username' => $params->get('username'),
+            'email' => $params->get('email')
+        ];
+
+        try {
+            $updateAccount = $userModel->updateAccount($properties);
+        } catch (\Exception $e) {
+            $properties = ['errorMessage' => 'Something went wrong!'];
+            return $this->render('views/error.php', $properties);
+        }
+
+        $this->redirect("/settings");
     }
 
     private function authenticatedUserIsSameAsProfileUser(int $id): bool

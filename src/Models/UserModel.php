@@ -165,4 +165,19 @@ class UserModel extends AbstractModel
 
         return $sth->fetchAll(PDO::FETCH_CLASS, self::CLASSNAME);
     }
+
+    public function updateAccount($properties)
+    {
+        $query = 'UPDATE users
+        SET username = :username, email = :email
+        WHERE id = :id';
+
+        $sth = $this->db->prepare($query);
+
+        $sth->bindValue(':id', $properties['id']);
+        $sth->bindValue(':username', $properties['username']);
+        $sth->bindValue(':email', $properties['email']);
+
+        $sth->execute();
+    }
 }
