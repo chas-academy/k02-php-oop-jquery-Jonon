@@ -2,29 +2,30 @@
     <div class="row justify-content-center align-items-center settings">
         <div class="col-8 ">
             <h1 class="text-center">Settings</h1>
-            <form>
+            <form action="/settings/updateaccount" method="post">
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $this->getAuthenticatedUser()?>">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">E-mail</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" placeholder="E-mail">
+                        <input type="email" class="form-control" name="email" placeholder="E-mail" value="<?php echo $_SESSION['user']->getEmail()?>">
                     </div>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button class="btn btn-primary">Save settings</button>
-                </div>
-                
+                    <button class="btn btn--secondary">Save settings</button>
+                </div>  
             </form>
 
-            <h2 class="text-center">Delete account</h2>
+            <h2 class="text-center mt-3">Delete account</h2>
             <p class="text-center">Warning, clicking this button will delete your account permanently!</p>
             <div class="d-flex justify-content-center">
-                <button class="btn btn-primary">Delete your account</button>
+            <form action="settings/deleteaccount" method="post">
+                <button class="btn btn-danger">Delete your account</button>
+            </form>
             </div>
         </div>
     </div>

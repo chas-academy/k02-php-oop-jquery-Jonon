@@ -1,0 +1,10 @@
+.settings {
+    height: 88vh;
+}
+
+
+@media (max-width: 575px) {
+    .settings .btn {
+        width: 100%;
+    }
+}
