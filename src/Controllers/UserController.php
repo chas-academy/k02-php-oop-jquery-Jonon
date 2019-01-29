@@ -289,7 +289,6 @@ class UserController extends AbstractController
     public function updateAccountSettings()
     {
         $params = $this->request->getParams();
-        var_dump($params);
         
         $userModel = new UserModel();
 
@@ -310,6 +309,11 @@ class UserController extends AbstractController
         }
 
         $this->redirect("/settings");
+    }
+
+    public function deleteAccount()
+    {
+
     }
 
     private function authenticatedUserIsSameAsProfileUser(int $id): bool
