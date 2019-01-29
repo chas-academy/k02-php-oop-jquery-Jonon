@@ -313,7 +313,18 @@ class UserController extends AbstractController
 
     public function deleteAccount()
     {
+        $userModel = new UserModel();
 
+        $id = $this->getAuthenticatedUserId();
+
+        try {
+            $deleteAccount = $userModel->deleteAccount($id);
+        } catch (\Exception $e) {
+            $properties = ['errorMessage' => 'Something went wrong!'];
+            return $this->render('views/error.php', $properties);
+        }
+
+        $this->redirect("/home");
     }
 
     private function authenticatedUserIsSameAsProfileUser(int $id): bool
