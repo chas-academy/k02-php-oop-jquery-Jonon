@@ -1,19 +1,19 @@
 @import url('blocks/main-navigation.css');
 @import url('blocks/dropdown-menu.css');
+@import url('blocks/profile-banner.css');
 @import url('blocks/profile-bar.css');
+@import url('blocks/jumbo-home.css');
 @import url('blocks/tweet.css');
 @import url('blocks/user-card.css');
 @import url('blocks/profile-card.css');
-@import url('blocks/profile-banner.css');
 @import url('blocks/tweet-form.css');
-@import url('blocks/jumbo-home.css');
-
 @import url('blocks/typography.css');
 @import url('blocks/colors.css');
 @import url('blocks/buttons.css');
 @import url('blocks/icons.css');
 @import url('blocks/utilities.css');
 @import url('blocks/main-modal.css');
+@import url('blocks/settings.css');
 
 /* push content down from top navbar */
 body {
