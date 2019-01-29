@@ -63,5 +63,9 @@
   "settings": {
     "controller": "User",
     "method": "viewSettings"
+  },
+  "settings/updateaccount": {
+    "controller": "User",
+    "method": "updateAccountSettings"
   }
 }
