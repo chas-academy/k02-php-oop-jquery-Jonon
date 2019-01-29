@@ -180,4 +180,16 @@ class UserModel extends AbstractModel
 
         $sth->execute();
     }
+
+    public function deleteAccount($id)
+    {
+        $query = 'DELETE FROM users
+        WHERE id = :id';
+
+        $sth = $this->db->prepare($query);
+
+        $sth->bindValue(':id', $id);
+
+        $sth->execute();
+    }
 }
