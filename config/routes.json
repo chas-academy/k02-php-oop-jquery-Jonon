@@ -67,5 +67,9 @@
   "settings/updateaccount": {
     "controller": "User",
     "method": "updateAccountSettings"
+  },
+  "settings/deleteaccount": {
+    "controller": "User",
+    "method": "deleteAccount"
   }
 }
