@@ -74,6 +74,13 @@ class UserController extends AbstractController
         
         $_SESSION['user'] = $user;
 
+        // temporary solution
+        $authUser = [
+            'username' => $user->getUsername()
+        ];
+        $_SESSION['AuthUser'] = $authUser;
+
+
         header('Location: /profile/'.$user->getUsername());
         return "";
     }
@@ -303,6 +310,7 @@ class UserController extends AbstractController
 
         try {
             $updateAccount = $userModel->updateAccount($properties);
+            // $_SESSION['AuthUser']['username'] = $properties['username'];
         } catch (\Exception $e) {
             $properties = ['errorMessage' => 'Something went wrong!'];
             return $this->render('views/error.php', $properties);

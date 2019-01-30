@@ -1,13 +1,4 @@
 <div class="container">
-    <!-- <div class="d-none d-sm-block">
-        <form class="tweet-form form-inline justify-content-center mt-3">
-            <div class="tweet-box form-group mx-sm-3 mb-2">
-                <textarea class="tweet-box__text-area tweet-box__text-area--border-radius tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet"></textarea>
-            </div>
-            <button type="submit" class="tweet-box__btn btn btn--primary mb-2 ">Tweet</button>
-        </form>
-    </div> -->
-
     <div class=" d-none d-sm-block">
         <div class="row justify-content-center">
             <div class="col-sm-8 ">
