@@ -1,5 +1,4 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^pure-savannah-86037.herokuapp.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.pure-savannah-86037.herokuapp.com$
-RewriteCond %{REQUEST_URI} !web/
-RewriteRule ^(.*) /web/index.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.php [L,QSA]
