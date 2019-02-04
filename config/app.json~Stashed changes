@@ -1,0 +1,7 @@
+{
+    "db": {
+        "dsn": "mysql:host=127.0.0.1;dbname=twitter;charset=utf8",
+        "user": "superuser",
+        "password": "Becom1ng neighborhood express day"
+    }
+}
