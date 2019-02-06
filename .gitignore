@@ -1,4 +1,5 @@
 login.txt
 sql.sql
 /.vscode
-/config/app.json
+credentials.php
+app.json
