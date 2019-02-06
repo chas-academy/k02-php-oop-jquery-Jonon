@@ -12,11 +12,12 @@ class Connection extends Singleton
     protected function __construct()
     {
         try {
-            $config = Config::getInstance()->get('db');
+            // $config = Config::getInstance()->get('db');
+            $conf = include 'config/app.php';
             $this->handler = new PDO(
-                $config['dsn'],
-                $config['user'],
-                $config['password']
+                $conf['dsn'],
+                $conf['user'],
+                $conf['password']
             );
             $this->handler->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
