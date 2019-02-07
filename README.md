@@ -55,6 +55,13 @@ CREATE TABLE followers (
 ```
 In aditiion to this, you will also need to create a file called credentials.php and put in in the config folder. This file should not be pushed to github.
 
+In the file you will need to include this:
+
+```php
+putenv("DB_DSN=mysql:host=127.0.0.1;dbname=mydatabase");
+putenv("DB_USER=username");
+putenv("DB_PASSWORD=password");
+```
 
 
 ### Built with
