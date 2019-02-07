@@ -16,7 +16,7 @@ This is what you will need
 
 You will need to install these aditional programs to get the app working on your local machine. If you are using Linux, you can simply install it with a few commands. If you are using Winderp everything as a developer becomes slightly more annoying, but I would advice you to use vagrant or a server like WAMP.
 
-When you have done this you will need to create a database and create these tables:
+When you have done this you will need to create a database and these tables:
 
 ```mysql
 CREATE TABLE IF NOT EXISTS users (
@@ -32,7 +32,6 @@ CREATE TABLE tweets (
   tweetId INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   tweet VARCHAR(255) NOT NULL,
   Id INT(11) NOT NULL,
-  PRIMARY KEY (tweetId),
   INDEX FK_id_tweets (Id ASC),
   CONSTRAINT FK_id_tweets
     FOREIGN KEY (Id)
@@ -54,9 +53,9 @@ CREATE TABLE followers (
     REFERENCES users (id)
     ON UPDATE CASCADE);
 ```
-In aditiion to these will also need to create a file called credentials and put in in the config folder
+In aditiion to this, you will also need to create a file called credentials and put in in the config folder
 
-You will also need
+
 
 ### Built with
 * MVC
