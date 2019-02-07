@@ -26,9 +26,20 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(250) NOT NULL UNIQUE,
   password VARCHAR(100) NOT NULL,
   joinDate DATE NOT NULL,
-  description VARCHAR(250) NOT NULL DEFAULT 'Please write something here...';
-```
+  description VARCHAR(250) NOT NULL DEFAULT 'Please write something here...');
 
+CREATE TABLE tweets (
+  tweetId INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  tweet VARCHAR(255) NOT NULL,
+  Id INT(11) NOT NULL,
+  PRIMARY KEY (tweetId),
+  INDEX FK_id_tweets (Id ASC),
+  CONSTRAINT FK_id_tweets
+    FOREIGN KEY (Id)
+    REFERENCES users (id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+```
 In aditiion to these will also need to create a file called credentials and put in in the config folder
 
 You will also need
