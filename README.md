@@ -38,7 +38,21 @@ CREATE TABLE tweets (
     FOREIGN KEY (Id)
     REFERENCES users (id)
     ON DELETE CASCADE
-    ON UPDATE CASCADE)
+    ON UPDATE CASCADE);
+
+CREATE TABLE followers (
+  userId INT(11) NOT NULL,
+  followerId INT(11) NOT NULL,
+  INDEX userId (userId ASC),
+  INDEX followerId (followerId ASC),
+  CONSTRAINT followers_ibfk_1
+    FOREIGN KEY (userId)
+    REFERENCES users (id)
+    ON UPDATE CASCADE,
+  CONSTRAINT followers_ibfk_2
+    FOREIGN KEY (followerId)
+    REFERENCES users (id)
+    ON UPDATE CASCADE);
 ```
 In aditiion to these will also need to create a file called credentials and put in in the config folder
 
