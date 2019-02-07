@@ -18,7 +18,16 @@ You will need to install these aditional programs to get the app working on your
 
 When you have done this you will need to create a database and create these tables:
 
-
+```mysql
+CREATE TABLE IF NOT EXISTS users (
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  email VARCHAR(250) NOT NULL UNIQUE,
+  password VARCHAR(100) NOT NULL,
+  joinDate DATE NOT NULL,
+  description VARCHAR(250) NOT NULL DEFAULT 'Please write something here...';
+```
 
 In aditiion to these will also need to create a file called credentials and put in in the config folder
 
