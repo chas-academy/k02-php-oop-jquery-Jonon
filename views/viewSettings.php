@@ -6,7 +6,7 @@
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $this->getAuthenticatedUser()?>">
+                        <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $_SESSION['AuthUser']['username']?>">
                     </div>
                 </div>
                 <div class="form-group row">
