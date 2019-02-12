@@ -272,6 +272,10 @@ class UserController extends AbstractController
         $tweetModel = new TweetModel();
         $params = $this->request->getParams();
 
+        if (!$this->request->isPost()) {
+            return $this->redirect("home");
+        }
+
         //  get id from logged in user
         $userId = $this->getAuthenticatedUserId();
 
