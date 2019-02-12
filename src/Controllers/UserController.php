@@ -44,7 +44,7 @@ class UserController extends AbstractController
         //  check if the parameters exist
         if (!$params->has('email') && !$params->has('password')) {
             $params = ['errorMessage' => 'No info provided.'];
-            return $this->render('views/error.php', $params);
+            return $this->render('views/login.php', $params);
         }
 
         //
@@ -54,7 +54,7 @@ class UserController extends AbstractController
         //  Validate email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $params = ['errorMessage' => 'Email not valid.'];
-            return $this->render('views/error.php', $params);
+            return $this->render('views/login.php', $params);
         }
 
         //  Send to model
@@ -63,13 +63,13 @@ class UserController extends AbstractController
         try {
             $user = $userModel->getByEmail($email);
         } catch (NotFoundException $e) {
-            $params = ['errorMessage' => 'Email not found.'];
-            return $this->render('views/error.php', $params);
+            $params = ['errorMessage' => 'Something went wrong trying to log in.'];
+            return $this->render('views/login.php', $params);
         }
         
         if (!password_verify($password, $user->getPassword())) {
-            $params = ['errorMessage' => 'Password not valid.'];
-            return $this->render('views/error.php', $params);
+            $params = ['errorMessage' => 'Something went wrong trying to log in.'];
+            return $this->render('views/login.php', $params);
         }
         
         $_SESSION['user'] = $user;
@@ -110,7 +110,7 @@ class UserController extends AbstractController
         try {
             $tweets = $tweetModel->getTweets($username);
         } catch (\Exception $e) {
-            $properties = ['errorMessage' => 'Please tweet something!'];
+            $properties = ['errorMessage' => 'Something went wrong!'];
             return $this->render('views/profile.php', $properties);
         }
 

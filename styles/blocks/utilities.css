@@ -49,6 +49,10 @@
     word-break: break-all;
 }
 
+.full-height {
+    height: 88vh;
+}
+
 
 /* Sticky footer */
 html, body {
