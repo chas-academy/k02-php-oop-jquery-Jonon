@@ -56,7 +56,7 @@ class UserModel extends AbstractModel
         return $row;
     }
 
-    public function getByUsername($username)
+    public function getByUsername(string $username): User
     {
         $query = 'SELECT * FROM users WHERE username = :username';
         $sth = $this->db->prepare($query);
@@ -76,7 +76,7 @@ class UserModel extends AbstractModel
         return $users;
     }
 
-    public function updateDescription($properties)
+    public function updateDescription(array $properties): void
     {
         $query = 'UPDATE users
         SET name = :name, description = :description
@@ -91,7 +91,7 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
-    public function follow($properties)
+    public function follow(array $properties): void
     {
         $query = 'INSERT INTO followers(userId, followerId)
         VALUES(:id, :followerId)';
@@ -104,7 +104,7 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
-    public function unfollow($properties)
+    public function unfollow(array $properties): void
     {
         $query = 'DELETE FROM followers 
         where userid =:id AND followerId = :followerId';
@@ -116,7 +116,7 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
-    public function getUsersFollowingById($profileUserId)
+    public function getUsersFollowingById(int $profileUserId): array
     {
         $query = 'SELECT * FROM users 
         INNER JOIN followers ON users.id = followers.userId
@@ -135,7 +135,7 @@ class UserModel extends AbstractModel
         return $following;
     }
 
-    public function getUsersFollowersById($profileUserId)
+    public function getUsersFollowersById(int $profileUserId): array
     {
         $query = 'SELECT * FROM users 
         INNER JOIN followers ON users.id = followers.followerId
@@ -154,7 +154,7 @@ class UserModel extends AbstractModel
         return $followers;
     }
 
-    public function search($search)
+    public function search(string $search): array
     {
         $query = 'SELECT * FROM users
         WHERE name LIKE :search OR username LIKE :search';
@@ -166,7 +166,7 @@ class UserModel extends AbstractModel
         return $sth->fetchAll(PDO::FETCH_CLASS, self::CLASSNAME);
     }
 
-    public function updateAccount($properties)
+    public function updateAccount(array $properties): void
     {
         $query = 'UPDATE users
         SET username = :username, email = :email
@@ -181,7 +181,7 @@ class UserModel extends AbstractModel
         $sth->execute();
     }
 
-    public function deleteAccount($id)
+    public function deleteAccount(int $id): void
     {
         $query = 'DELETE FROM users
         WHERE id = :id';
