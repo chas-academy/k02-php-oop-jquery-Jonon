@@ -76,7 +76,8 @@ class UserController extends AbstractController
 
         // temporary solution
         $authUser = [
-            'username' => $user->getUsername()
+            'username' => $user->getUsername(),
+            'email' => $user->getEmail()
         ];
         $_SESSION['AuthUser'] = $authUser;
 
@@ -318,6 +319,10 @@ class UserController extends AbstractController
             'email' => $params->get('email')
         ];
 
+        // temporary solution for session variable update
+        $_SESSION['AuthUser']['username'] = $properties['username'];
+        $_SESSION['AuthUser']['email'] = $properties['email'];
+        
         try {
             $updateAccount = $userModel->updateAccount($properties);
             // $_SESSION['AuthUser']['username'] = $properties['username'];
