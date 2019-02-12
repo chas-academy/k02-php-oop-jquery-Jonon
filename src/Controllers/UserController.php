@@ -251,9 +251,6 @@ class UserController extends AbstractController
         }
 
         $tweetModel = new TweetModel();
-        $userModel = new UserModel();
-
-         //  get id from logged in user
         $userId = $this->getAuthenticatedUserId();
         
         try {
@@ -267,21 +264,30 @@ class UserController extends AbstractController
             'tweets' => $tweets
         ];
 
+        return $this->render('views/home.php', $properties);
+    }
+
+    public function tweet()
+    {
+        $tweetModel = new TweetModel();
         $params = $this->request->getParams();
 
-        $userProperties = [
+        //  get id from logged in user
+        $userId = $this->getAuthenticatedUserId();
+
+        $properties = [
             'tweet' => $params->get('tweet'),
             'id' => $userId
         ];
 
         try {
-            $createTweet = $tweetModel->CreateTweet($userProperties);
+            $createTweet = $tweetModel->CreateTweet($properties);
         } catch (\Exception $e) {
             $properties = ['errorMessage' => 'Something went wrong!'];
             return $this->render('views/error.php', $properties);
         }
 
-        return $this->render('views/home.php', $properties);
+        $this->redirect("home");
     }
 
     public function viewSettings()

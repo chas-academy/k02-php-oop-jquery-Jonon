@@ -7,6 +7,10 @@
     "controller": "User",
     "method": "home"
   },
+  "tweet": {
+    "controller": "User",
+    "method": "tweet"
+  },
   "search": {
     "controller": "Search",
     "method": "search"

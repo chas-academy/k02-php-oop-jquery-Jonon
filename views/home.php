@@ -2,11 +2,11 @@
     <div class=" d-none d-sm-block">
         <div class="row justify-content-center">
             <div class="col-sm-8 ">
-                <form class="tweet-form  mt-3 ">
+                <form class="tweet-form mt-3" action="tweet" method="post">
                     <div class="tweet-box form-group mb-2 d-flex justify-content-center">
                         <textarea class="tweet-box__text-area tweet-box__text-area--border-radius tweet-box__text--area-resize-none tweet-box__text-area--text-center-placeholder form-control" placeholder="What's happening?" name="tweet"></textarea>
                     </div>
-                    <div class=" d-flex justify-content-center">
+                    <div class="d-flex justify-content-center">
                         <button type="submit" class="tweet-form__tweet-button tweet-box__btn btn btn--primary w-75 mb-2">Tweet</button>
                     </div>
                 </form>
