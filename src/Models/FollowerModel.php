@@ -10,7 +10,7 @@ class FollowerModel extends AbstractModel
 {
     const CLASSNAME = '\TwitterClone\Domain\Follower';
 
-    public function getIfFollowing(array $params): bool
+    public function getIfFollowing(array $params)
     {
         $query = 'SELECT * FROM followers 
         where userId = :userId AND followerId = :followerId';
