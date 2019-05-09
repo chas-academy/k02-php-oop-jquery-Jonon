@@ -4,7 +4,8 @@ This is a simple clone of the famous website Twitter
 
 Website: <https://pure-savannah-86037.herokuapp.com>
 
-Here you can find my design, sitemap, personas and user stories for the website
+
+**Here you can find my design, sitemap, personas and user stories for the website**
 
 design: <https://www.figma.com/file/dflGb31g9ZmDoXkLFqfzQpsw/Twitter-clone?node-id=0%3A1>
 
