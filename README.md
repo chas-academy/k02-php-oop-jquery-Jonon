@@ -11,7 +11,10 @@ design: <https://www.figma.com/file/dflGb31g9ZmDoXkLFqfzQpsw/Twitter-clone?node-
 
 persona: <https://drive.google.com/open?id=1BkE-9yxQJgf3GLUfRXhCrj7kGLpwitYR>
 
-persona: <https://drive.google.com/open?id=1WFP4XA9og51_dEKGASm-0bVtXl11z2_R6GrrsfSaerE>
+persona: 
+- <https://drive.google.com/open?id=1WFP4XA9og51_dEKGASm-0bVtXl11z2_R6GrrsfSaerE>
+- <https://drive.google.com/open?id=14KH_aHSWRfHaihRR0JRr4tI2ZNza20sy-KzzhYC2M3g>
+- <https://drive.google.com/open?id=1_GdsYDj9EHpqhjaNANk03vJuKsxw6XqYDiV0Me16vpI>
 
 user stories <https://drive.google.com/open?id=1tVWdk5y2dB61QLlovy0mV6-F8MBhOxRalsPYh9QHfGo>
 
