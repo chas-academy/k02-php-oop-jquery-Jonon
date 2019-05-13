@@ -9,7 +9,7 @@ Website: <https://pure-savannah-86037.herokuapp.com>
 
 design: <https://www.figma.com/file/dflGb31g9ZmDoXkLFqfzQpsw/Twitter-clone?node-id=0%3A1>
 
-persona: <https://drive.google.com/open?id=1BkE-9yxQJgf3GLUfRXhCrj7kGLpwitYR>
+Sitemap: <https://drive.google.com/open?id=1BkE-9yxQJgf3GLUfRXhCrj7kGLpwitYR>
 
 persona: 
 - <https://drive.google.com/open?id=1WFP4XA9og51_dEKGASm-0bVtXl11z2_R6GrrsfSaerE>
